@@ -1,37 +1,36 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
-import React from "react"
+import { Link } from 'gatsby';
+import PropTypes from 'prop-types';
+import React from 'react';
+import Navbar from 'react-bootstrap/Navbar';
+import Nav from 'react-bootstrap/Nav';
+import NavDropdown from 'react-bootstrap/NavDropdown';
+import Container from 'react-bootstrap/Container';
 
 const Navigation = ({ siteTitle }) => (
-  <nav className="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
-    <div className="container">
-      <Link className="navbar-brand" to="/">
+  <Navbar
+    className="navbar-custom"
+    variant="dark"
+    expand="lg">
+    <Container>
+      <Navbar.Brand as={Link} to="/">
         {siteTitle}
-      </Link>
-      <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        <span className="navbar-toggler-icon"></span>
-      </button>
-      <div className="collapse navbar-collapse" id="navbarResponsive">
-        <ul className="navbar-nav ml-auto">
-          <li className="nav-item">
-            <Link className="nav-link" to="/">Festival</Link>
-          </li>
-          <li className="nav-item">
-            <Link className="nav-link" to="/">Packages</Link>
-          </li>
-          <li className="nav-item">
-            <Link className="nav-link" to="/">Media</Link>
-          </li>
-          <li className="nav-item">
-            <Link className="nav-link" to="/">About Armenia</Link>
-          </li>
-          <li className="nav-item">
-            <Link className="nav-link" to="/">Contact Us</Link>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+      </Navbar.Brand>
+      <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+      <Navbar.Collapse id="responsive-navbar-nav">
+        <Nav className="ml-auto">
+          <NavDropdown title="Festival">
+            <NavDropdown.Item as={Link} to="/">DJs</NavDropdown.Item>
+            <NavDropdown.Item as={Link} to="/">Orchestra</NavDropdown.Item>
+            <NavDropdown.Item as={Link} to="/">Maestros</NavDropdown.Item>
+          </NavDropdown>
+          <Nav.Link as={Link} to="/">Packages</Nav.Link>
+          <Nav.Link as={Link} to="/">Media</Nav.Link>
+          <Nav.Link as={Link} to="/">About Armenia</Nav.Link>
+          <Nav.Link as={Link} to="/contact-us">Contact Us</Nav.Link>
+        </Nav>
+      </Navbar.Collapse>
+    </Container>
+  </Navbar>
 )
 
 Navigation.propTypes = {

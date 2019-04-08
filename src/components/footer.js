@@ -6,6 +6,8 @@ import {
   FaEnvelope,
   FaPhone,
   FaFacebook,
+  FaViber,
+  FaWhatsapp,
 } from 'react-icons/fa';
 
 const Footer = () => (
@@ -29,6 +31,16 @@ const Footer = () => (
           </p>
           <p>
             <FaPhone />
+            &nbsp;
+            +374 95889933
+          </p>
+          <p>
+            <FaViber />
+            &nbsp;
+            +374 95889933
+          </p>
+          <p>
+            <FaWhatsapp />
             &nbsp;
             +374 95889933
           </p>

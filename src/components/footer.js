@@ -27,7 +27,7 @@ const Footer = () => (
           <p>
             <FaEnvelope />
             &nbsp;
-            arman.dashan@gmail.com
+            tango.inarmenia@gmail.com
           </p>
           <p>
             <FaPhone />

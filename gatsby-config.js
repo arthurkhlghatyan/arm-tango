@@ -19,7 +19,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
+        name: `ArmTangoFest2019`,
         short_name: `ArmTangoFest2019`,
         start_url: `/`,
         background_color: `rgba(0, 0, 0, 0.7)`,

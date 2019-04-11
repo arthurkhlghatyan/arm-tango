@@ -19,10 +19,12 @@ class Maestros extends Component {
   videos = {
     'yuliana-basmajyan': [
       'HDJYm2okrbo',
+      'vi1ZDL8aBMI',
     ],
     'dominic-bridge': [
-      'vi1ZDL8aBMI',
+      'XOHGiT-xaBM',
       '1cdtb-yrZxY',
+      'yanTqfvvUsw',
     ],
     'ronen-&-dorit': [
       'QmWUVDlK1wk',

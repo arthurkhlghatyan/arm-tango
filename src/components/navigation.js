@@ -22,7 +22,7 @@ const Navigation = ({ siteTitle }) => (
             <NavDropdown.Item as={Link} to="/about-armenia">About Armenia</NavDropdown.Item>
             <NavDropdown.Item as={Link} to="/djs">DJs</NavDropdown.Item>
             <NavDropdown.Item as={Link} to="/orchestra">Orchestra</NavDropdown.Item>
-            <NavDropdown.Item as={Link} to="/maestros">Maestros</NavDropdown.Item>
+            <NavDropdown.Item as={Link} to="/maestros">Teachers/Dancers</NavDropdown.Item>
           </NavDropdown>
           <NavDropdown title="Packages">
             <NavDropdown.Item as={Link} to="/packages">
@@ -32,7 +32,6 @@ const Navigation = ({ siteTitle }) => (
               Workshops and milongas
             </NavDropdown.Item>
           </NavDropdown>
-          <Nav.Link as={Link} to="/media">Media</Nav.Link>
           <Nav.Link as={Link} to="/contact-us">Contact Us</Nav.Link>
         </Nav>
       </Navbar.Collapse>

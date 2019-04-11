@@ -57,7 +57,7 @@ const Footer = () => (
         &nbsp;
         <a
           target="_blank"
-          href="https://www.facebook.com/arthur.khlghatyan.1">Arthur</a>
+          href="https://www.facebook.com/arthur.khlghatyan.1">Arthur K.</a>
       </div>
     </div>
   </footer>

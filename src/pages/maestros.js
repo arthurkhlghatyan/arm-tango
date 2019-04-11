@@ -12,8 +12,10 @@ class Maestros extends Component {
   state = {
     show: false,
     showVideoModal: false,
+    showGalleryModal: false,
     maestroName: '',
     videoMaestroName: '',
+    galleryMaestroName: '',
   };
 
   videos = {
@@ -102,7 +104,7 @@ class Maestros extends Component {
           <div className="container">
             <h1 className="jumbotron-heading">Maestros</h1>
             <p className="lead text-muted">
-              Leading Tango Maestros are going to participate
+              Famous tango maestros are going to share, teach and dance during Festival.
             </p>
           </div>
         </section>
@@ -141,7 +143,7 @@ class Maestros extends Component {
                           type="button"
                           className="btn btn-sm btn-outline-secondary"
                           onClick={this.openVideoModal.bind(this, 'yuliana-basmajyan')}>
-                          See Videos
+                          Watch Video
                         </button>
                         <button type="button" className="btn btn-sm btn-outline-secondary">See Photos</button>
                       </div>
@@ -180,7 +182,7 @@ class Maestros extends Component {
                           type="button"
                           className="btn btn-sm btn-outline-secondary"
                           onClick={this.openVideoModal.bind(this, 'dominic-bridge')}>
-                          See Videos
+                          Watch Video
                         </button>
                         <button type="button" className="btn btn-sm btn-outline-secondary">See Photos</button>
                       </div>
@@ -220,7 +222,7 @@ class Maestros extends Component {
                           type="button"
                           className="btn btn-sm btn-outline-secondary"
                           onClick={this.openVideoModal.bind(this, 'ronen-&-dorit')}>
-                          See Videos
+                          Watch Video
                         </button>
                         <button type="button" className="btn btn-sm btn-outline-secondary">See Photos</button>
                       </div>
@@ -259,7 +261,7 @@ class Maestros extends Component {
                           type="button"
                           className="btn btn-sm btn-outline-secondary"
                           onClick={this.openVideoModal.bind(this, 'tatiana-gordinscaia-&-pavel-lozan')}>
-                          See Videos
+                          Watch Video
                         </button>
                         <button type="button" className="btn btn-sm btn-outline-secondary">See Photos</button>
                       </div>
@@ -275,6 +277,14 @@ class Maestros extends Component {
             <Modal.Title>Biography</Modal.Title>
           </Modal.Header>
           <Modal.Body dangerouslySetInnerHTML={{ __html: biographies[maestroName] }} />
+        </Modal>
+        <Modal show={showVideoModal} onHide={this.handleVideoModalClose}>
+          <Modal.Header closeButton>
+            <Modal.Title>Videos</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+            {this.renderVideos()}
+          </Modal.Body>
         </Modal>
         <Modal show={showVideoModal} onHide={this.handleVideoModalClose}>
           <Modal.Header closeButton>

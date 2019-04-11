@@ -32,14 +32,8 @@ const Footer = () => (
           <p>
             <FaPhone />
             &nbsp;
-            +374 95889933
-          </p>
-          <p>
             <FaViber />
             &nbsp;
-            +374 95889933
-          </p>
-          <p>
             <FaWhatsapp />
             &nbsp;
             +374 95889933

@@ -69,9 +69,8 @@ const DJS = () => (
                   </strong>
                 </p>
                 <p className="card-text">
-                    From 2008 to the present, he has been playing music as a DJ in several Contacttango Istanbul Dance Company milongas such as the ones at Grand Local Pera,
-                    Underground and Milonga Cordial and Milonga Tradicional until 2015.
-                    He was the DJ at Daniel Melingo (who is a famous Argentinian electrotango singer) concert held in 2010 at “Ghetto” concert hall.
+                    Improved himself by gathering information about tango and tango music archives from  orchestras since 2006 his start to tango, Mihran began DJing at  2008. 
+  From 2008 to the present, he has been playing music in Turkey, Italy, Romania, Bulgaria and Greece milongas. Mihran brings tango dancers and audiences together with various orchestras by blending rhythm and melody in appropriate proportions.
                   </p>
                 <div className="d-flex justify-content-between align-items-center">
                   <div className="btn-group">

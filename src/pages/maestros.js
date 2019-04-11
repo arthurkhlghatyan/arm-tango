@@ -11,12 +11,38 @@ import biographies from '../data/biographies';
 class Maestros extends Component {
   state = {
     show: false,
+    showVideoModal: false,
     maestroName: '',
+    videoMaestroName: '',
+  };
+
+  videos = {
+    'yuliana-basmajyan': [
+      'HDJYm2okrbo',
+    ],
+    'dominic-bridge': [
+      'vi1ZDL8aBMI',
+      '1cdtb-yrZxY',
+    ],
+    'ronen-&-dorit': [
+      'QmWUVDlK1wk',
+      'ABsTgrSARJQ',
+    ],
+    'tatiana-gordinscaia-&-pavel-lozan': [
+      'OytWpIZnYq8',
+    ],
   };
 
   handleClose = () => {
     this.setState({
       show: false,
+      maestroName: '',
+    });
+  };
+
+  handleVideoModalClose = () => {
+    this.setState({
+      showVideoModal: false,
     });
   };
 
@@ -27,8 +53,42 @@ class Maestros extends Component {
     });
   };
 
+  openVideoModal = (videoMaestroName) => {
+    this.setState({
+      showVideoModal: true,
+      videoMaestroName,
+    });
+  };
+
+  renderVideos() {
+    const { videoMaestroName } = this.state;
+
+    if (videoMaestroName === '') {
+      return null;
+    }
+
+    const iframes = this.videos[videoMaestroName].map((item, index) => {
+      return (
+        <iframe
+          key={index}
+          width="100%"
+          height="345"
+          src={`https://www.youtube.com/embed/${item}`} />
+      );
+    });
+
+    console.log(iframes);
+
+    return iframes;
+  }
+
   render() {
-    const { show, maestroName } = this.state;
+    const {
+      show,
+      showVideoModal,
+      maestroName,
+      videoMaestroName,
+    } = this.state;
 
     return (
       <Layout>
@@ -75,7 +135,12 @@ class Maestros extends Component {
                           onClick={this.openReadMoreModal.bind(this, 'yuliana-basmajyan')}>
                           Read More
                         </button>
-                        <button type="button" className="btn btn-sm btn-outline-secondary">Watch Video</button>
+                        <button
+                          type="button"
+                          className="btn btn-sm btn-outline-secondary"
+                          onClick={this.openVideoModal.bind(this, 'yuliana-basmajyan')}>
+                          See Videos
+                        </button>
                         <button type="button" className="btn btn-sm btn-outline-secondary">See Photos</button>
                       </div>
                     </div>
@@ -109,7 +174,12 @@ class Maestros extends Component {
                           className="btn btn-sm btn-outline-secondary">
                           Read More
                         </button>
-                        <button type="button" className="btn btn-sm btn-outline-secondary">Watch Video</button>
+                        <button
+                          type="button"
+                          className="btn btn-sm btn-outline-secondary"
+                          onClick={this.openVideoModal.bind(this, 'dominic-bridge')}>
+                          See Videos
+                        </button>
                         <button type="button" className="btn btn-sm btn-outline-secondary">See Photos</button>
                       </div>
                     </div>
@@ -144,7 +214,12 @@ class Maestros extends Component {
                           className="btn btn-sm btn-outline-secondary">
                           Read More
                         </button>
-                        <button type="button" className="btn btn-sm btn-outline-secondary">Watch Video</button>
+                        <button
+                          type="button"
+                          className="btn btn-sm btn-outline-secondary"
+                          onClick={this.openVideoModal.bind(this, 'ronen-&-dorit')}>
+                          See Videos
+                        </button>
                         <button type="button" className="btn btn-sm btn-outline-secondary">See Photos</button>
                       </div>
                     </div>
@@ -178,7 +253,12 @@ class Maestros extends Component {
                           className="btn btn-sm btn-outline-secondary">
                           Read More
                         </button>
-                        <button type="button" className="btn btn-sm btn-outline-secondary">Watch Video</button>
+                        <button
+                          type="button"
+                          className="btn btn-sm btn-outline-secondary"
+                          onClick={this.openVideoModal.bind(this, 'tatiana-gordinscaia-&-pavel-lozan')}>
+                          See Videos
+                        </button>
                         <button type="button" className="btn btn-sm btn-outline-secondary">See Photos</button>
                       </div>
                     </div>
@@ -193,6 +273,14 @@ class Maestros extends Component {
             <Modal.Title>Biography</Modal.Title>
           </Modal.Header>
           <Modal.Body dangerouslySetInnerHTML={{ __html: biographies[maestroName] }} />
+        </Modal>
+        <Modal show={showVideoModal} onHide={this.handleVideoModalClose}>
+          <Modal.Header closeButton>
+            <Modal.Title>Videos</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+            {this.renderVideos()}
+          </Modal.Body>
         </Modal>
       </Layout>
     );

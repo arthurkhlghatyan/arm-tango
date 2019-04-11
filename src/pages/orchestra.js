@@ -73,7 +73,6 @@ class Orchestra extends Component {
                           className="btn btn-sm btn-outline-secondary">
                           Read More
                         </button>
-                        <button type="button" className="btn btn-sm btn-outline-secondary">Watch Video</button>
                         <button type="button" className="btn btn-sm btn-outline-secondary">See Photos</button>
                       </div>
                     </div>
@@ -107,7 +106,6 @@ class Orchestra extends Component {
                           className="btn btn-sm btn-outline-secondary">
                           Read More
                         </button>
-                        <button type="button" className="btn btn-sm btn-outline-secondary">Watch Video</button>
                         <button type="button" className="btn btn-sm btn-outline-secondary">See Photos</button>
                       </div>
                     </div>
@@ -141,7 +139,6 @@ class Orchestra extends Component {
                           className="btn btn-sm btn-outline-secondary">
                           Read More
                         </button>
-                        <button type="button" className="btn btn-sm btn-outline-secondary">Watch Video</button>
                         <button type="button" className="btn btn-sm btn-outline-secondary">See Photos</button>
                       </div>
                     </div>

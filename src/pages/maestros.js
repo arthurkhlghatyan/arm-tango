@@ -2,12 +2,11 @@ import React, { Component } from 'react';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 import Modal from 'react-bootstrap/Modal';
-import Button from 'react-bootstrap/Button';
 import YulianaBasmajyanImg from '../images/yuliana-basmajyan.jpg';
 import RonenDoritImg from '../images/ronen-dorit.jpg';
 import DominicBridgeImg from '../images/dominic-bridge.jpg';
 import TatianaPavel from '../images/tatiana-pavel.jpg';
-import biographies from '../data/biographies'; 
+import biographies from '../data/biographies';
 
 class Maestros extends Component {
   state = {
@@ -161,13 +160,13 @@ class Maestros extends Component {
                     data-holder-rendered="true"
                     src={TatianaPavel}
                   />
-                  <div className="card-body ">
+                  <div className="card-body">
                     <p className="card-text">
-                      <p>
-                        <strong>
-                          Tatiana Gordinscaia & Pavel Lozan
-                        </strong>
-                      </p>
+                      <strong>
+                        Tatiana Gordinscaia & Pavel Lozan
+                      </strong>
+                    </p>
+                    <p className="card-text">
                       Tatiana & Pavel dancing together since year 2013.
                       Tatiana founded first school of Argentinean tango in Moldova in 2010, and also organized 3 big festivals and 3 marathons, common known as MADT.
                     </p>

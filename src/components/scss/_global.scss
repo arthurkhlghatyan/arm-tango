@@ -35,6 +35,10 @@ iframe {
   border: 0;
 }
 
+.modal-dialog {
+  max-width: 850px;
+} 
+
 .gallery {
   -webkit-column-count: 3;
   -moz-column-count: 3;

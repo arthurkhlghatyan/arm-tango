@@ -193,9 +193,7 @@ class Maestros extends Component {
           <Modal.Header closeButton>
             <Modal.Title>Biography</Modal.Title>
           </Modal.Header>
-          <Modal.Body>
-            {biographies[maestroName]}
-          </Modal.Body>
+          <Modal.Body dangerouslySetInnerHTML={{ __html: biographies[maestroName] }} />
         </Modal>
       </Layout>
     );

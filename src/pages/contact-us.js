@@ -22,7 +22,7 @@ class ContactUs extends Component {
       phoneNumber: '',
       message: '',
     },
-    captchaVerified: true,
+    captchaVerified: false,
     inProgress: false,
     error: false,
     success: false,

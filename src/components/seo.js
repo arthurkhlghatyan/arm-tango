@@ -77,7 +77,9 @@ function SEO({ description, lang, meta, keywords, title }) {
             : []
         )
         .concat(meta)}
-    />
+    >
+      <script src="https://www.google.com/recaptcha/api.js?render=explicit"></script>
+    </Helmet>
   )
 }
 

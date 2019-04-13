@@ -18,8 +18,8 @@ const Navigation = ({ siteTitle }) => (
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="ml-auto">
+          <Nav.Link as={Link} to="/about-armenia">About Armenia</Nav.Link>
           <NavDropdown title="Festival">
-            <NavDropdown.Item as={Link} to="/about-armenia">About Armenia</NavDropdown.Item>
             <NavDropdown.Item as={Link} to="/djs">DJs</NavDropdown.Item>
             <NavDropdown.Item as={Link} to="/orchestra">Orchestra</NavDropdown.Item>
             <NavDropdown.Item as={Link} to="/maestros">Teachers/Dancers</NavDropdown.Item>

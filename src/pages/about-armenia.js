@@ -18,11 +18,6 @@ const AboutArmenia = () => (
           height="345"
           border="0"
           src="https://www.youtube.com/embed/vi6c2ULCzEU" />
-        <iframe
-          width="100%"
-          height="345"
-          border="0"
-          src="https://www.youtube.com/embed/gjEFDYyryiw" />
       </div>
     </section>
   </Layout>

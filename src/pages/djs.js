@@ -12,12 +12,26 @@ import biographies from '../data/biographies';
 class DJS extends Component {
   state = {
     show: false,
+    showGallery: true,
     djName: '',
+    galleryDjName: '',
   };
+
+  images = [
+    'https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(117).jpg',
+    'https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(98).jpg',
+    'https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(131).jpg',
+  ];
 
   handleClose = () => {
     this.setState({
       show: false,
+    });
+  };
+
+  handleGalleryClose = () => {
+    this.setState({
+      showGallery: false,
     });
   };
 
@@ -28,8 +42,15 @@ class DJS extends Component {
     });
   };
 
+  openGalleryModal = (galleryDjName) => {
+    this.setState({
+      showGallery: true,
+      galleryDjName,
+    });
+  };
+
   render() {
-    const { show, djName } = this.state;
+    const { show, showGallery, djName } = this.state;
     
     return (
       <Layout>
@@ -78,7 +99,12 @@ class DJS extends Component {
                           className="btn btn-sm btn-outline-secondary">
                           Read More
                         </button>
-                        <button type="button" className="btn btn-sm btn-outline-secondary">See Photos</button>
+                        <button
+                          onClick={this.openGalleryModal.bind(this, 'mihran-sigaher')}
+                          type="button"
+                          className="btn btn-sm btn-outline-secondary">
+                          See Photos
+                        </button>
                       </div>
                     </div>
                   </div>
@@ -158,6 +184,14 @@ class DJS extends Component {
             <Modal.Title>Biography</Modal.Title>
           </Modal.Header>
           <Modal.Body dangerouslySetInnerHTML={{ __html: biographies[djName] }} />
+        </Modal>
+        <Modal show={showGallery} onHide={this.handleGalleryClose}>
+          <Modal.Header closeButton>
+            <Modal.Title>Gallery</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+            Hello World
+          </Modal.Body>
         </Modal>
       </Layout>
     );

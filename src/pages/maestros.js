@@ -8,14 +8,69 @@ import DominicBridgeImg from '../images/dominic-bridge.jpg';
 import TatianaPavel from '../images/tatiana-pavel.jpg';
 import biographies from '../data/biographies';
 
+// Slider images
+import YulianaBasmajyan1 from '../images/slides/yuliana-basmajyan/1.jpg';
+import YulianaBasmajyan2 from '../images/slides/yuliana-basmajyan/2.jpg';
+import YulianaBasmajyan3 from '../images/slides/yuliana-basmajyan/3.jpg';
+import YulianaBasmajyan4 from '../images/slides/yuliana-basmajyan/4.jpg';
+import YulianaBasmajyan5 from '../images/slides/yuliana-basmajyan/5.jpg';
+
+// Slider images
+import DominicBridge1 from '../images/slides/dominic-bridge/1.jpg';
+import DominicBridge2 from '../images/slides/dominic-bridge/2.jpg';
+import DominicBridge3 from '../images/slides/dominic-bridge/3.jpg';
+import DominicBridge4 from '../images/slides/dominic-bridge/4.jpg';
+import DominicBridge5 from '../images/slides/dominic-bridge/5.jpg';
+
+import RonenDorit1 from '../images/slides/ronen-dorit/1.jpg';
+import RonenDorit2 from '../images/slides/ronen-dorit/2.jpg';
+import RonenDorit3 from '../images/slides/ronen-dorit/3.jpg';
+import RonenDorit4 from '../images/slides/ronen-dorit/4.jpg';
+import RonenDorit5 from '../images/slides/ronen-dorit/5.jpg';
+import RonenDorit6 from '../images/slides/ronen-dorit/6.jpg';
+
+import TatianaPavel1 from '../images/slides/tatiana-pavel/1.jpg';
+import TatianaPavel2 from '../images/slides/tatiana-pavel/2.jpg';
+import TatianaPavel3 from '../images/slides/tatiana-pavel/3.jpg';
+
 class Maestros extends Component {
   state = {
     show: false,
     showVideoModal: false,
-    showGalleryModal: false,
+    showGallery: false,
     maestroName: '',
-    videoMaestroName: '',
-    galleryMaestroName: '',
+    videoMaestroName: 'yuliana-basmajyan',
+    galleryMaestroName: 'yuliana-basmajyan',
+  };
+
+  images = {
+    'yuliana-basmajyan': [
+      YulianaBasmajyan1,
+      YulianaBasmajyan2,
+      YulianaBasmajyan3,
+      YulianaBasmajyan4,
+      YulianaBasmajyan5,
+    ],
+    'dominic-bridge': [
+      DominicBridge1,
+      DominicBridge2,
+      DominicBridge3,
+      DominicBridge4,
+      DominicBridge5,
+    ],
+    'ronen-dorit': [
+      RonenDorit1,
+      RonenDorit2,
+      RonenDorit3,
+      RonenDorit4,
+      RonenDorit5,
+      RonenDorit6,
+    ],
+    'tatiana-pavel': [
+      TatianaPavel1,
+      TatianaPavel2,
+      TatianaPavel3,
+    ],
   };
 
   videos = {
@@ -50,6 +105,12 @@ class Maestros extends Component {
     });
   };
 
+  handleGalleryClose = () => {
+    this.setState({
+      showGallery: false,
+    });
+  };
+
   openReadMoreModal = (maestroName) => {
     this.setState({
       show: true,
@@ -61,6 +122,13 @@ class Maestros extends Component {
     this.setState({
       showVideoModal: true,
       videoMaestroName,
+    });
+  };
+
+  openGalleryModal = (galleryMaestroName) => {
+    this.setState({
+      showGallery: true,
+      galleryMaestroName,
     });
   };
 
@@ -81,8 +149,6 @@ class Maestros extends Component {
       );
     });
 
-    console.log(iframes);
-
     return iframes;
   }
 
@@ -90,8 +156,10 @@ class Maestros extends Component {
     const {
       show,
       showVideoModal,
+      showGallery,
       maestroName,
       videoMaestroName,
+      galleryMaestroName,
     } = this.state;
 
     return (
@@ -145,7 +213,12 @@ class Maestros extends Component {
                           onClick={this.openVideoModal.bind(this, 'yuliana-basmajyan')}>
                           Watch Video
                         </button>
-                        <button type="button" className="btn btn-sm btn-outline-secondary">See Photos</button>
+                        <button
+                          onClick={this.openGalleryModal.bind(this, 'yuliana-basmajyan')}
+                          type="button"
+                          className="btn btn-sm btn-outline-secondary">
+                          See Photos
+                        </button>
                       </div>
                     </div>
                   </div>
@@ -184,7 +257,12 @@ class Maestros extends Component {
                           onClick={this.openVideoModal.bind(this, 'dominic-bridge')}>
                           Watch Video
                         </button>
-                        <button type="button" className="btn btn-sm btn-outline-secondary">See Photos</button>
+                        <button
+                          onClick={this.openGalleryModal.bind(this, 'dominic-bridge')}
+                          type="button"
+                          className="btn btn-sm btn-outline-secondary">
+                          See Photos
+                        </button>
                       </div>
                     </div>
                   </div>
@@ -224,7 +302,12 @@ class Maestros extends Component {
                           onClick={this.openVideoModal.bind(this, 'ronen-&-dorit')}>
                           Watch Video
                         </button>
-                        <button type="button" className="btn btn-sm btn-outline-secondary">See Photos</button>
+                        <button
+                          onClick={this.openGalleryModal.bind(this, 'ronen-dorit')}
+                          type="button"
+                          className="btn btn-sm btn-outline-secondary">
+                          See Photos
+                        </button>
                       </div>
                     </div>
                   </div>
@@ -263,7 +346,12 @@ class Maestros extends Component {
                           onClick={this.openVideoModal.bind(this, 'tatiana-gordinscaia-&-pavel-lozan')}>
                           Watch Video
                         </button>
-                        <button type="button" className="btn btn-sm btn-outline-secondary">See Photos</button>
+                        <button
+                          onClick={this.openGalleryModal.bind(this, 'tatiana-pavel')}
+                          type="button"
+                          className="btn btn-sm btn-outline-secondary">
+                          See Photos
+                        </button>
                       </div>
                     </div>
                   </div>
@@ -286,12 +374,20 @@ class Maestros extends Component {
             {this.renderVideos()}
           </Modal.Body>
         </Modal>
-        <Modal show={showVideoModal} onHide={this.handleVideoModalClose}>
+        <Modal show={showGallery} onHide={this.handleGalleryClose}>
           <Modal.Header closeButton>
             <Modal.Title>Videos</Modal.Title>
           </Modal.Header>
           <Modal.Body>
-            {this.renderVideos()}
+            <div class="gallery" id="gallery">
+              {this.images[galleryMaestroName].map((item, index) => {
+                return (
+                  <div key={index} class="mb-3 pics animation all 2">
+                    <img class="img-fluid" src={item} />
+                  </div>
+                );
+              })}
+            </div>
           </Modal.Body>
         </Modal>
       </Layout>

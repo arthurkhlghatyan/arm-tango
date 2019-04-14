@@ -7,15 +7,59 @@ import OrchestraImg from '../images/orchestra.jpg';
 import FernandoSanchezImg from '../images/fernando-sanchez.jpg';
 import HugoSatorreImg from '../images/hugo-satorre.jpg';
 
+// Slider images
+import PhilarmonicOrchestra1 from '../images/slides/philarmonic-orchestra/1.jpg';
+import PhilarmonicOrchestra2 from '../images/slides/philarmonic-orchestra/2.jpg';
+import PhilarmonicOrchestra3 from '../images/slides/philarmonic-orchestra/3.jpg';
+
+import HugoSatorre1 from '../images/slides/hugo-satorre/1.jpg';
+import HugoSatorre2 from '../images/slides/hugo-satorre/2.jpg';
+import HugoSatorre3 from '../images/slides/hugo-satorre/3.jpg';
+import HugoSatorre4 from '../images/slides/hugo-satorre/4.jpg';
+
+import FernandoSanchez1 from '../images/slides/fernando-sanchez/1.jpg';
+
 class Orchestra extends Component {
   state = {
     show: false,
+    showGallery: false,
     musicianName: '',
+    galleryMusicianName: 'philarmonic-orchestra',
+  };
+
+  images = {
+    'philarmonic-orchestra': [
+      PhilarmonicOrchestra1,
+      PhilarmonicOrchestra2,
+      PhilarmonicOrchestra3,
+    ],
+    'hugo-satorre': [
+      HugoSatorre1,
+      HugoSatorre2,
+      HugoSatorre3,
+      HugoSatorre4,
+    ],
+    'fernando-sanchez': [
+      FernandoSanchez1,
+    ]
   };
 
   handleClose = () => {
     this.setState({
       show: false,
+    });
+  };
+
+  handleGalleryClose = () => {
+    this.setState({
+      showGallery: false,
+    });
+  };
+
+  openGalleryModal = (galleryMusicianName) => {
+    this.setState({
+      showGallery: true,
+      galleryMusicianName,
     });
   };
 
@@ -27,7 +71,12 @@ class Orchestra extends Component {
   };
 
   render() {
-    const { show, musicianName } = this.state;
+    const {
+      show,
+      musicianName,
+      showGallery,
+      galleryMusicianName,
+    } = this.state;
 
     return (
       <Layout>
@@ -73,7 +122,12 @@ class Orchestra extends Component {
                           className="btn btn-sm btn-outline-secondary">
                           Read More
                         </button>
-                        <button type="button" className="btn btn-sm btn-outline-secondary">See Photos</button>
+                        <button
+                          onClick={this.openGalleryModal.bind(this, 'philarmonic-orchestra')}
+                          type="button"
+                          className="btn btn-sm btn-outline-secondary">
+                          See Photos
+                        </button>
                       </div>
                     </div>
                   </div>
@@ -106,7 +160,12 @@ class Orchestra extends Component {
                           className="btn btn-sm btn-outline-secondary">
                           Read More
                         </button>
-                        <button type="button" className="btn btn-sm btn-outline-secondary">See Photos</button>
+                        <button
+                          onClick={this.openGalleryModal.bind(this, 'hugo-satorre')}
+                          type="button"
+                          className="btn btn-sm btn-outline-secondary">
+                          See Photos
+                        </button>
                       </div>
                     </div>
                   </div>
@@ -139,7 +198,12 @@ class Orchestra extends Component {
                           className="btn btn-sm btn-outline-secondary">
                           Read More
                         </button>
-                        <button type="button" className="btn btn-sm btn-outline-secondary">See Photos</button>
+                        <button
+                          onClick={this.openGalleryModal.bind(this, 'fernando-sanchez')}
+                          type="button"
+                          className="btn btn-sm btn-outline-secondary">
+                          See Photos
+                        </button>
                       </div>
                     </div>
                   </div>
@@ -153,6 +217,22 @@ class Orchestra extends Component {
             <Modal.Title>Biography</Modal.Title>
           </Modal.Header>
           <Modal.Body dangerouslySetInnerHTML={{ __html: biographies[musicianName] }} />
+        </Modal>
+        <Modal show={showGallery} onHide={this.handleGalleryClose}>
+          <Modal.Header closeButton>
+            <Modal.Title>Gallery</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+            <div class="gallery" id="gallery">
+              {this.images[galleryMusicianName].map((item, index) => {
+                return (
+                  <div key={index} class="mb-3 pics animation all 2">
+                    <img class="img-fluid" src={item} />
+                  </div>
+                );
+              })}
+            </div>
+          </Modal.Body>
         </Modal>
       </Layout>
     );  

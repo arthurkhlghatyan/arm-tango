@@ -9,19 +9,50 @@ import MihranSigaherDj from '../images/mihran-sigaher.jpg';
 import TatianaGordinscaya from '../images/tatiana-gordinscaya.jpg';
 import biographies from '../data/biographies';
 
+// Slider images
+import LucamLambert1 from '../images/slides/luca-lambert/1.jpg';
+import LucamLambert2 from '../images/slides/luca-lambert/2.jpg';
+import LucamLambert3 from '../images/slides/luca-lambert/3.jpg';
+import LucamLambert4 from '../images/slides/luca-lambert/4.jpg';
+import LucamLambert5 from '../images/slides/luca-lambert/5.jpg';
+import LucamLambert6 from '../images/slides/luca-lambert/6.jpg';
+
+import MihranSigaher1 from '../images/slides/mihran-sigaher/1.jpg';
+import MihranSigaher2 from '../images/slides/mihran-sigaher/2.jpg';
+import MihranSigaher3 from '../images/slides/mihran-sigaher/3.jpg';
+import MihranSigaher4 from '../images/slides/mihran-sigaher/4.jpg';
+
+import TatianaGordinscaya1 from '../images/slides/tatiana-gordinscaya/1.jpg';
+import TatianaGordinscaya2 from '../images/slides/tatiana-gordinscaya/2.jpg';
+
 class DJS extends Component {
   state = {
     show: false,
-    showGallery: true,
+    showGallery: false,
     djName: '',
-    galleryDjName: '',
+    galleryDjName: 'luca-lamberti',
   };
 
-  images = [
-    'https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(117).jpg',
-    'https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(98).jpg',
-    'https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(131).jpg',
-  ];
+  images = {
+    'luca-lamberti': [
+      LucamLambert1,
+      LucamLambert2,
+      LucamLambert3,
+      LucamLambert4,
+      LucamLambert5,
+      LucamLambert6,
+    ],
+    'mihran-sigaher': [
+      MihranSigaher1,
+      MihranSigaher2,
+      MihranSigaher3,
+      MihranSigaher4,
+    ],
+    'tatiana-gordinscaya': [
+      TatianaGordinscaya1,
+      TatianaGordinscaya2,
+    ],
+  };
 
   handleClose = () => {
     this.setState({
@@ -50,7 +81,7 @@ class DJS extends Component {
   };
 
   render() {
-    const { show, showGallery, djName } = this.state;
+    const { show, showGallery, djName, galleryDjName } = this.state;
     
     return (
       <Layout>
@@ -94,13 +125,13 @@ class DJS extends Component {
                     <div className="d-flex justify-content-between align-items-center">
                       <div className="btn-group">
                         <button
-                          onClick={this.openReadMoreModal.bind(this, 'mihran-sigaher')}
+                          onClick={this.openReadMoreModal.bind(this, 'luca-lamberti')}
                           type="button"
                           className="btn btn-sm btn-outline-secondary">
                           Read More
                         </button>
                         <button
-                          onClick={this.openGalleryModal.bind(this, 'mihran-sigaher')}
+                          onClick={this.openGalleryModal.bind(this, 'luca-lamberti')}
                           type="button"
                           className="btn btn-sm btn-outline-secondary">
                           See Photos
@@ -137,7 +168,12 @@ class DJS extends Component {
                           className="btn btn-sm btn-outline-secondary">
                           Read More
                         </button>
-                        <button type="button" className="btn btn-sm btn-outline-secondary">See Photos</button>
+                        <button
+                          onClick={this.openGalleryModal.bind(this, 'mihran-sigaher')}
+                          type="button"
+                          className="btn btn-sm btn-outline-secondary">
+                          See Photos
+                        </button>
                       </div>
                     </div>
                   </div>
@@ -170,7 +206,12 @@ class DJS extends Component {
                           className="btn btn-sm btn-outline-secondary">
                           Read More
                         </button>
-                        <button type="button" className="btn btn-sm btn-outline-secondary">See Photos</button>
+                        <button
+                          onClick={this.openGalleryModal.bind(this, 'tatiana-gordinscaya')}
+                          type="button"
+                          className="btn btn-sm btn-outline-secondary">
+                          See Photos
+                        </button>
                       </div>
                     </div>
                   </div>
@@ -190,7 +231,15 @@ class DJS extends Component {
             <Modal.Title>Gallery</Modal.Title>
           </Modal.Header>
           <Modal.Body>
-            Hello World
+            <div class="gallery" id="gallery">
+              {this.images[galleryDjName].map((item, index) => {
+                return (
+                  <div key={index} class="mb-3 pics animation all 2">
+                    <img class="img-fluid" src={item} />
+                  </div>
+                );
+              })}
+            </div>
           </Modal.Body>
         </Modal>
       </Layout>

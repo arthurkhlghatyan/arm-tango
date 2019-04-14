@@ -79,6 +79,17 @@ function SEO({ description, lang, meta, keywords, title }) {
         .concat(meta)}
     >
       <script src="https://www.google.com/recaptcha/api.js?render=explicit"></script>
+      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-138348380-1"></script>
+      <script>
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'UA-138348380-1'); 
+        `}
+      </script>
+
     </Helmet>
   )
 }

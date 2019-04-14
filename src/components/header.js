@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import Image02 from '../images/tango-poster.png';
+import Image02 from '../images/tango-poster.jpg';
 
 const Header = () => (
   <header className="masthead text-center text-white">

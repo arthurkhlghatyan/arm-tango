@@ -18,8 +18,8 @@ const WorkshopsAndMilongas = () => (
           <thead>
             <tr>
               <th scope="col">Workshops and Milongas</th>
-              <th scope="col">Before April 21st</th>
-              <th scope="col">Before Mar 21st</th>
+              <th scope="col">Before 21st of April</th>
+              <th scope="col">Before 21st of May</th>
               <th scope="col">Late reservation</th>
             </tr>
           </thead>
@@ -67,19 +67,19 @@ const WorkshopsAndMilongas = () => (
               <td>€85</td>
             </tr>
             <tr>
-              <th scope="row">Yerevan milonga + 3 workshops</th>
+              <th scope="row">Yerevan milongas + 3 workshops</th>
               <td>€75</td>
               <td>€90</td>
               <td>€120</td>
             </tr>
             <tr>
-              <th scope="row">Yerevan milonga + 5 workshops</th>
-              <td>€27</td>
-              <td>€30</td>
-              <td>€35</td>
+              <th scope="row">Yerevan milongas + 5 workshops</th>
+              <td>€125</td>
+              <td>€150</td>
+              <td>€185</td>
             </tr>
             <tr>
-              <th scope="row">Tsakhkadzor milonga + 4 workshops</th>
+              <th scope="row">Tsakhkadzor milongas + 4 workshops</th>
               <td>€95</td>
               <td>€115</td>
               <td>€140</td>

@@ -1,17 +1,11 @@
 header.masthead {
   position: relative;
   overflow: hidden;
-  padding-top: calc(7rem + 72px);
-  padding-bottom: 7rem;
-  background: url('../../images/home-section-background.jpg');
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-attachment: scroll;
-  background-size: cover;
   .masthead-content {
     z-index: 1;
     position: relative;
     color: rgba(0,0,0,.7);
+    height: 100%;
     .masthead-heading {
       font-size: 4rem;
     }
@@ -23,8 +17,6 @@ header.masthead {
 
 @media (min-width: 992px) {
   header.masthead {
-    padding-top: calc(10rem + 55px);
-    padding-bottom: 10rem;
     .masthead-content {
       .masthead-heading {
         font-size: 6rem;

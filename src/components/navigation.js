@@ -24,12 +24,15 @@ const Navigation = ({ siteTitle }) => (
             <NavDropdown.Item as={Link} to="/orchestra">Orchestra</NavDropdown.Item>
             <NavDropdown.Item as={Link} to="/maestros">Teachers/Dancers</NavDropdown.Item>
           </NavDropdown>
-          <NavDropdown title="Packages">
+          <NavDropdown title="Booking">
             <NavDropdown.Item as={Link} to="/packages">
               Festival and Tour packages
             </NavDropdown.Item>
             <NavDropdown.Item as={Link} to="/workshops-and-milongas">
               Workshops and milongas
+            </NavDropdown.Item>
+            <NavDropdown.Item as={Link} to="/workshop-topics">
+              Workshop Topics
             </NavDropdown.Item>
           </NavDropdown>
           <Nav.Link as={Link} to="/contact-us">Contact Us</Nav.Link>

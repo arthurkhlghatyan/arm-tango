@@ -1,16 +1,21 @@
 import React from 'react';
 import Layout from '../components/layout';
+import SEO from '../components/seo';
 
 const WorkshopTopics = () => (
   <Layout>
+    <SEO
+      title="Workshop Topics"
+      keywords={[`tango`, `#ArmTangoFest2019`, `workshop`, `topics`]}
+    />
     <section className="jumbotron text-center">
       <div className="container">
         <h1 className="jumbotron-heading">Workshop Topics</h1>
         <p className="lead text-muted">
           Explore workshop topics by your experience level 
         </p>
-        <h5>Ronen Khayat and Dorit Shalom</h5>
-        <table class="table">
+        <h5 className="mt-5 mb-5">Yuliana Basmajyan and Dominic Bridge</h5>
+        <table className="table">
           <thead>
             <tr>
               <th scope="col">Beginners</th>
@@ -21,84 +26,40 @@ const WorkshopTopics = () => (
           <tbody>
             <tr>
               <td>
-                <div>
-                  Tango Itself- Connection, embrace, walking.    
-                </div>
-                <div>
-                  Paradas into a change of direcrion.
-                </div>
-              </td>
-              <td>
-                <div>
-                  Sacadas Chain- for Leaders and Followers
-                </div>
-                <div>
-                  Giros! Turnning to both ditections.
-                </div>
-                <div>
-                  Dynamics of Boleo
-                </div>
-              </td>
-              <td>
-                <div>
-                  Out of Axis 1- Colgadas
-                </div>
-                <div>
-                  Out of Axis 2- Volcadas
-                </div>
-                <div>
-                  Ganchos made out of dynamic places
-                </div>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-        <h5>Yuliana Basmajyan and Dominic Bridge</h5>
-        <table class="table">
-          <thead>
-            <tr>
-              <th scope="col">Beginners</th>
-              <th scope="col">Intermediate</th>
-              <th scope="col">Advanced</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>
-                <div>
+                <p>
                   Make the walk Great again    
-                </div>
-                <div>
+                </p>
+                <p>
                   La Caminada
-                </div>
+                </p>
               </td>
               <td>
-                <div>
+                <p>
                   Las Caderas
-                </div>
-                <div>
+                </p>
+                <p>
                   Sacadas
-                </div>
-                <div>
+                </p>
+                <p>
                   Milonga con Onda
-                </div>
-                <div>
+                </p>
+                <p>
                   Boleoes and friends
-                </div>
+                </p>
               </td>
               <td>
-                <div>
+                <p>
                   Stylish "Alternative" Sequences
-                </div>
-                <div>
+                </p>
+                <p>
                   Colcadas
-                </div>
+                </p>
               </td>
             </tr>
           </tbody>
         </table>
-        <h5>Ronen Khayat and Dorit Shalom</h5>
-        <table class="table">
+        <h5 className="mt-5 mb-5">Ronen Khayat and Dorit Shalom</h5>
+        <table className="table">
           <thead>
             <tr>
               <th scope="col">Beginners</th>
@@ -109,34 +70,66 @@ const WorkshopTopics = () => (
           <tbody>
             <tr>
               <td>
-                <div>
+                <p>
                   Tango Itself- Connection, embrace, walking.    
-                </div>
-                <div>
+                </p>
+                <p>
                   Paradas into a change of direcrion.
-                </div>
+                </p>
               </td>
               <td>
-                <div>
+                <p>
                   Sacadas Chain- for Leaders and Followers
-                </div>
-                <div>
+                </p>
+                <p>
                   Giros! Turnning to both ditections.
-                </div>
-                <div>
+                </p>
+                <p>
                   Dynamics of Boleo
-                </div>
+                </p>
               </td>
               <td>
-                <div>
+                <p>
                   Out of Axis 1- Colgadas
-                </div>
-                <div>
+                </p>
+                <p>
                   Out of Axis 2- Volcadas
-                </div>
-                <div>
+                </p>
+                <p>
                   Ganchos made out of dynamic places
-                </div>
+                </p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <h5 className="mt-5 mb-5" />
+        <table className="table">
+          <thead>
+            <tr>
+              <th scope="col">Mihran Sigaher</th>
+              <th scope="col">Luca Lamberti</th>
+              <th scope="col">Tatiana Gordinscaya and Pavel Lozan</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <p>
+                  4 dimensions in tango improvisation
+                </p>
+                <p>
+                  Transfiguration for complex figures
+                </p>
+              </td>
+              <td>
+                <p>Musicality</p>
+                <p>Rhythm sequences</p>
+                <p>Milonga</p>
+              </td>
+              <td>
+                <p>Embrace as a basic for tango</p>
+                <p>Body language as a key to your best tango></p>
+                <p>Women technique</p> 
               </td>
             </tr>
           </tbody>

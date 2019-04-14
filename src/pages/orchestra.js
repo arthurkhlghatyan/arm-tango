@@ -18,6 +18,9 @@ import HugoSatorre3 from '../images/slides/hugo-satorre/3.jpg';
 import HugoSatorre4 from '../images/slides/hugo-satorre/4.jpg';
 
 import FernandoSanchez1 from '../images/slides/fernando-sanchez/1.jpg';
+import FernandoSanchez2 from '../images/slides/fernando-sanchez/2.jpg';
+import FernandoSanchez3 from '../images/slides/fernando-sanchez/3.jpg';
+import FernandoSanchez4 from '../images/slides/fernando-sanchez/4.jpg';
 
 class Orchestra extends Component {
   state = {
@@ -41,6 +44,9 @@ class Orchestra extends Component {
     ],
     'fernando-sanchez': [
       FernandoSanchez1,
+      FernandoSanchez2,
+      FernandoSanchez3,
+      FernandoSanchez4,
     ]
   };
 
@@ -223,11 +229,11 @@ class Orchestra extends Component {
             <Modal.Title>Gallery</Modal.Title>
           </Modal.Header>
           <Modal.Body>
-            <div class="gallery" id="gallery">
+            <div className="gallery" id="gallery">
               {this.images[galleryMusicianName].map((item, index) => {
                 return (
-                  <div key={index} class="mb-3 pics animation all 2">
-                    <img class="img-fluid" src={item} />
+                  <div key={index} className="mb-3 pics animation all 2">
+                    <img className="img-fluid" src={item} />
                   </div>
                 );
               })}

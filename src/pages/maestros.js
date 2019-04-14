@@ -376,14 +376,14 @@ class Maestros extends Component {
         </Modal>
         <Modal show={showGallery} onHide={this.handleGalleryClose}>
           <Modal.Header closeButton>
-            <Modal.Title>Videos</Modal.Title>
+            <Modal.Title>Gallery</Modal.Title>
           </Modal.Header>
           <Modal.Body>
-            <div class="gallery" id="gallery">
+            <div className="gallery" id="gallery">
               {this.images[galleryMaestroName].map((item, index) => {
                 return (
-                  <div key={index} class="mb-3 pics animation all 2">
-                    <img class="img-fluid" src={item} />
+                  <div key={index} className="mb-3 pics animation all 2">
+                    <img className="img-fluid" src={item} />
                   </div>
                 );
               })}

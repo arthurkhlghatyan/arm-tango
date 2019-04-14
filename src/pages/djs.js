@@ -231,11 +231,11 @@ class DJS extends Component {
             <Modal.Title>Gallery</Modal.Title>
           </Modal.Header>
           <Modal.Body>
-            <div class="gallery" id="gallery">
+            <div className="gallery" id="gallery">
               {this.images[galleryDjName].map((item, index) => {
                 return (
-                  <div key={index} class="mb-3 pics animation all 2">
-                    <img class="img-fluid" src={item} />
+                  <div key={index} className="mb-3 pics animation all 2">
+                    <img className="img-fluid" src={item} />
                   </div>
                 );
               })}

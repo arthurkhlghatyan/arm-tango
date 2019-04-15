@@ -23,7 +23,7 @@ const captureBookNowClick = () => {
 };
 
 const Footer = () => (
-  <footer className="bg-black">
+  <footer>
     <Container>
       <Row>
         <Col sm={12} md={4} lg={4} className="mt-4 mb-1">

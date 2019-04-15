@@ -7,7 +7,7 @@ const HomeSections = () => (
     <section>
       <div className="container">
         <div className="row align-items-center">
-          <div className="col-lg-6">
+          <div className="col-lg-6 mt-4">
             <div>
               <img className="img-fluid" src={Image02} alt="" />
             </div>

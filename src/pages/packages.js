@@ -3,6 +3,13 @@ import Layout from '../components/layout';
 import SEO from '../components/seo';
 import Container from 'react-bootstrap/Container';
 
+const captureBookNowClick = () => {
+  getOutboundLink(
+    'https://docs.google.com/forms/d/e/1FAIpQLSe8pL_3YiNJZbFwPC1gtCggzjHjid14rbZnDXJRYbFzYsBi_w/viewform'
+  );
+  return false;
+};
+
 const Packages = () => (
   <Layout>
     <SEO
@@ -29,7 +36,12 @@ const Packages = () => (
                 <li>7 milongas + 5 workshops</li>
                 <li>Tsakhkadzor resort weekend</li>
               </ul>
-              <button type="button" className="btn btn-lg btn-block btn-outline-primary">Book now</button>
+              <button
+                onClick={captureBookNowClick}
+                type="button"
+                className="btn btn-lg btn-block btn-outline-primary">
+                Book now
+              </button>
             </div>
           </div>
           <div className="card mb-4 box-shadow">
@@ -44,7 +56,12 @@ const Packages = () => (
                 <li>Airport pick up and drop off</li>
                 <li>Pick up from hotel to milonga or the studios for workshops</li>
               </ul>
-              <button type="button" className="btn btn-lg btn-block btn-outline-primary">Book now</button>
+              <button
+                onClick={captureBookNowClick}
+                type="button"
+                className="btn btn-lg btn-block btn-outline-primary">
+                Book now
+              </button>
             </div>
           </div>
           <div className="card mb-4 box-shadow">
@@ -60,7 +77,12 @@ const Packages = () => (
                 <li>3 times meals</li>
                 <li>City tour, Kecharis Monastery</li>
               </ul>
-              <button type="button" className="btn btn-lg btn-block btn-outline-primary">Book now</button>
+              <button
+                onClick={captureBookNowClick}
+                type="button"
+                className="btn btn-lg btn-block btn-outline-primary">
+                Book now
+              </button>
             </div>
           </div>
         </div>

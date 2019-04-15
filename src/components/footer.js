@@ -15,6 +15,13 @@ const captureProfileLink = () => {
   return false;
 };
 
+const captureBookNowClick = () => {
+  getOutboundLink(
+    'https://docs.google.com/forms/d/e/1FAIpQLSe8pL_3YiNJZbFwPC1gtCggzjHjid14rbZnDXJRYbFzYsBi_w/viewform'
+  );
+  return false;
+};
+
 const Footer = () => (
   <footer className="bg-black">
     <Container>
@@ -61,7 +68,7 @@ const Footer = () => (
           </h5>
           <p>
             <a
-              target="_blank"
+              onClick={captureBookNowClick}
               href="https://docs.google.com/forms/d/e/1FAIpQLSe8pL_3YiNJZbFwPC1gtCggzjHjid14rbZnDXJRYbFzYsBi_w/viewform">
               Book now
             </a>

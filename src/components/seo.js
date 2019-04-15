@@ -86,7 +86,14 @@ function SEO({ description, lang, meta, keywords, title }) {
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
 
-          gtag('config', 'UA-138348380-1'); 
+          gtag('config', 'UA-138348380-1');
+
+          var captureOutboundLink = function(url) {
+            ga('send', 'event', 'outbound', 'click', url, {
+             'transport': 'beacon',
+             'hitCallback': function(){document.location = url;}
+            });
+          }
         `}
       </script>
 

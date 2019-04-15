@@ -11,7 +11,7 @@ import {
 } from 'react-icons/fa';
 
 const captureProfileLink = () => {
-  window.captureOutboundLink('https://www.facebook.com/arthur.khlghatyan.1');
+  window.getOutboundLink('https://www.facebook.com/arthur.khlghatyan.1');
   return false;
 };
 
@@ -90,7 +90,6 @@ const Footer = () => (
         &nbsp;
         <a
           onClick={captureProfileLink}
-          target="_blank"
           href="https://www.facebook.com/arthur.khlghatyan.1">Arthur K.</a>
       </div>
     </div>

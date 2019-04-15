@@ -88,10 +88,12 @@ function SEO({ description, lang, meta, keywords, title }) {
 
           gtag('config', 'UA-138348380-1');
 
-          var captureOutboundLink = function(url) {
-            ga('send', 'event', 'outbound', 'click', url, {
-             'transport': 'beacon',
-             'hitCallback': function(){document.location = url;}
+          var getOutboundLink = function(url) {
+            gtag('event', 'click', {
+              'event_category': 'outbound',
+              'event_label': url,
+              'transport_type': 'beacon',
+              'event_callback': function(){document.location = url;}
             });
           }
         `}

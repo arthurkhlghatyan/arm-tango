@@ -7,11 +7,6 @@ const HomeSections = () => (
     <section>
       <div className="container">
         <div className="row align-items-center">
-          <div className="col-lg-6 mt-4">
-            <div>
-              <img className="img-fluid" src={Image02} alt="" />
-            </div>
-          </div>
           <div className="col-lg-6 text-center">
             <div className="p-5">
               <h2 className="display-4">Argentine Tango Festival</h2>
@@ -20,6 +15,11 @@ const HomeSections = () => (
                   Maestros, tangueras, tangueros, and DJs from all over the world will join us for this inaugural Tango Festival in Armenia – the ancient land at the crossroads of East and West. The festival includes two weekends of workshops, milongas, after-parties, and guided tours of the capital city and the regions. 
                 </p>
               </div>
+            </div>
+          </div>
+          <div className="col-lg-6 mt-4">
+            <div>
+              <img className="img-fluid" src={Image02} alt="" />
             </div>
           </div>
         </div>

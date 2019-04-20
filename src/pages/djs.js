@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import { MDBContainer, MDBRow, MDBCol } from 'mdbreact';
-import Lightbox from 'react-image-lightbox';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 import Modal from 'react-bootstrap/Modal';

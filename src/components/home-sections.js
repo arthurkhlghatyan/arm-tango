@@ -1,6 +1,5 @@
 import React, { Fragment } from 'react';
-import Image02 from '../images/home-section-background.jpg';
-import Image03 from '../images/03.jpg';
+import HomeSectionBackground from '../images/home-section-background.jpg';
 
 const HomeSections = () => (
   <Fragment>
@@ -19,7 +18,7 @@ const HomeSections = () => (
           </div>
           <div className="col-lg-6 mt-4">
             <div>
-              <img className="img-fluid" src={Image02} alt="" />
+              <img className="img-fluid" src={HomeSectionBackground} alt="" />
             </div>
           </div>
         </div>

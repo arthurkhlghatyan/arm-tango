@@ -74,7 +74,7 @@ const WorkshopTopics = () => (
                   Tango Itself- Connection, embrace, walking.    
                 </p>
                 <p>
-                  Paradas into a change of direcrion.
+                  Paradas into a change of direction.
                 </p>
               </td>
               <td>
@@ -82,7 +82,7 @@ const WorkshopTopics = () => (
                   Sacadas Chain- for Leaders and Followers
                 </p>
                 <p>
-                  Giros! Turnning to both ditections.
+                  Giros! Turnning to both directions.
                 </p>
                 <p>
                   Dynamics of Boleo
@@ -128,7 +128,7 @@ const WorkshopTopics = () => (
               </td>
               <td>
                 <p>Embrace as a basic for tango</p>
-                <p>Body language as a key to your best tango></p>
+                <p>Body language as a key to your best tango</p>
                 <p>Women technique</p> 
               </td>
             </tr>

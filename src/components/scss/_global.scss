@@ -47,8 +47,29 @@ iframe {
 }
 
 .agenda {
+  .date-start {
+    border-top: 3px solid #dee2e6; 
+  }
+
+  tr {
+    background-color: #fbcb5be3;
+
+    td, th {
+      border: 0 !important;
+    }
+  }
+
+  tr:nth-of-type(odd) {
+    background-color: #1d89bda6;
+  }
+
+  .date-header {
+    background-color: #e9ecef !important;
+  }
+
   .agenda-date {
     width: 170px;
+    background-color: #e9ecef;
 
     .dayofmonth {
       width: 40px;

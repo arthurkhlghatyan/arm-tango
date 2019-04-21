@@ -14,26 +14,28 @@ const Schedule = () => (
         <h1 className="jumbotron-heading text-center">Calendar</h1>
         <div className="agenda">
           <table className="table">
-            <thead>
+            <tbody>
               <tr>
-                <th>Date</th>
+                <th className="date-header">Date</th>
                 <th>Time</th>
                 <th>Event</th>
               </tr>
-            </thead>
-            <tbody>
-              <tr>
+              <tr className="date-start">
                 <td className="agenda-date active" rowSpan="1">
                   <div className="dayofmonth">21</div>
                   <div className="dayofweek">Friday</div>
                   <div className="shortdate text-muted">June, 2019</div>
                 </td>
                 <td className="agenda-time">
-                  7:00 PM - 11:45 PM
+                  <strong>
+                    7:00 PM - 11:45 PM
+                  </strong>
                 </td>
                 <td className="agenda-events">
                   <div className="agenda-event">
-                    Opening Milonga
+                    <strong>
+                      Opening Milonga
+                    </strong>
                   </div>
                 </td>
               </tr>        
@@ -48,7 +50,8 @@ const Schedule = () => (
                 </td>
                 <td className="agenda-events">
                   <div className="agenda-event">
-                    Make the walk great again (Yuliana & Dominic) 
+                    Make the walk great again
+                    (Yuliana Basmajyan & Dominic Bridge) 
                   </div>
                 </td>
               </tr>
@@ -58,7 +61,7 @@ const Schedule = () => (
                 </td>
                 <td className="agenda-events">
                   <div className="agenda-event">
-                    Boleos & Friends (Yuliana & Dominic) 
+                    Boleos & Friends (Yuliana Basmajyan & Dominic Bridge) 
                   </div>
                 </td>
               </tr>
@@ -68,7 +71,8 @@ const Schedule = () => (
                 </td>
                 <td className="agenda-events">
                   <div className="agenda-event">
-                    Embrace as a basic for tango (Tatiana & Pavel) 
+                    Embrace as a basic for tango
+                    (Tatiana Gordinscaia & Pavel Lozan) 
                   </div>
                 </td>
               </tr>
@@ -102,7 +106,7 @@ const Schedule = () => (
                   </div>
                 </td>
               </tr>
-              <tr>
+              <tr className="date-start">
                 <td className="agenda-date active" rowSpan="5">
                   <div className="dayofmonth">23</div>
                   <div className="dayofweek">Sunday</div>
@@ -113,7 +117,8 @@ const Schedule = () => (
                 </td>
                 <td className="agenda-events">
                   <div className="agenda-event">
-                    Connection, Embrace walking (Ronen & Dorit) 
+                    Connection, Embrace walking
+                    (Ronen Khayat and Dorit Shalom) 
                   </div>
                 </td>
               </tr>
@@ -123,7 +128,8 @@ const Schedule = () => (
                 </td>
                 <td className="agenda-events">
                   <div className="agenda-event">
-                    Paradas into a change of direction (Ronen & Dorit) 
+                    Paradas into a change of direction
+                    (Ronen Khayat and Dorit Shalom) 
                   </div>
                 </td>
               </tr>
@@ -149,15 +155,19 @@ const Schedule = () => (
               </tr>
               <tr>
                 <td className="agenda-time">
-                  7:00 PM - 1:00 AM
+                  <strong>
+                    7:00 PM - 1:00 AM
+                  </strong>
                 </td>
                 <td className="agenda-events">
                   <div className="agenda-event">
-                    Gala dinner and milonga 
+                    <strong>
+                      Gala dinner and milonga
+                    </strong> 
                   </div>
                 </td>
               </tr>
-              <tr>
+              <tr className="date-start">
                 <td className="agenda-date active" rowSpan="5">
                   <div className="dayofmonth">24</div>
                   <div className="dayofweek">Monday</div>
@@ -178,7 +188,8 @@ const Schedule = () => (
                 </td>
                 <td className="agenda-events">
                   <div className="agenda-event">
-                    Milonga con Onda (Yuliana & Dominic) 
+                    Milonga con Onda
+                    (Yuliana Basmajyan & Dominic Bridge)
                   </div>
                 </td>
               </tr>
@@ -188,7 +199,8 @@ const Schedule = () => (
                 </td>
                 <td className="agenda-events">
                   <div className="agenda-event">
-                    Stylish "Alternative" Sequences (Yuliana & Dominic) 
+                    Stylish "Alternative" Sequences
+                    (Yuliana Basmajyan & Dominic Bridge) 
                   </div>
                 </td>
               </tr>
@@ -212,7 +224,7 @@ const Schedule = () => (
                   </div>
                 </td>
               </tr>
-              <tr>
+              <tr className="date-start">
                 <td className="agenda-date active" rowSpan="6">
                   <div className="dayofmonth">25</div>
                   <div className="dayofweek">Tuesday</div>
@@ -243,7 +255,7 @@ const Schedule = () => (
                 </td>
                 <td className="agenda-events">
                   <div className="agenda-event">
-                    Women technique (Tatiana Gordinscaya) 
+                    Women technique (Tatiana Gordinscaia) 
                   </div>
                 </td>
               </tr>
@@ -253,7 +265,8 @@ const Schedule = () => (
                 </td>
                 <td className="agenda-events">
                   <div className="agenda-event">
-                    Out of Axis - Colgadas (Ronen & Dorit)
+                    Out of Axis - Colgadas
+                    (Ronen Khayat and Dorit Shalom)
                   </div>
                 </td>
               </tr>
@@ -263,7 +276,8 @@ const Schedule = () => (
                 </td>
                 <td className="agenda-events">
                   <div className="agenda-event">
-                    Out of Axis - Volcadas (Ronen & Dorit)
+                    Out of Axis - Volcadas
+                    (Ronen Khayat and Dorit Shalom)
                   </div>
                 </td>
               </tr>
@@ -277,7 +291,7 @@ const Schedule = () => (
                   </div>
                 </td>
               </tr>
-              <tr>
+              <tr className="date-start">
                 <td className="agenda-date active" rowSpan="1">
                   <div className="dayofmonth">26</div>
                   <div className="dayofweek">Wednesday</div>
@@ -292,7 +306,7 @@ const Schedule = () => (
                   </div>
                 </td>
               </tr>
-              <tr>
+              <tr className="date-start">
                 <td className="agenda-date active" rowSpan="6">
                   <div className="dayofmonth">27</div>
                   <div className="dayofweek">Thursday</div>
@@ -333,7 +347,8 @@ const Schedule = () => (
                 </td>
                 <td className="agenda-events">
                   <div className="agenda-event">
-                    Sacadas Chain (Ronen & Dorit) 
+                    Sacadas Chain
+                    (Ronen Khayat and Dorit Shalom) 
                   </div>
                 </td>
               </tr>
@@ -343,7 +358,8 @@ const Schedule = () => (
                 </td>
                 <td className="agenda-events">
                   <div className="agenda-event">
-                    Dynamics of Boleo (Ronen & Dorit) 
+                    Dynamics of Boleo
+                    (Ronen Khayat and Dorit Shalom)
                   </div>
                 </td>
               </tr>
@@ -357,7 +373,7 @@ const Schedule = () => (
                   </div>
                 </td>
               </tr>
-              <tr>
+              <tr className="date-start">
                 <td className="agenda-date active" rowSpan="2">
                   <div className="dayofmonth">28</div>
                   <div className="dayofweek">Friday</div>
@@ -382,7 +398,7 @@ const Schedule = () => (
                   </div>
                 </td>
               </tr>
-              <tr>
+              <tr className="date-start">
                 <td className="agenda-date active" rowSpan="5">
                   <div className="dayofmonth">29</div>
                   <div className="dayofweek">Saturday</div>
@@ -393,7 +409,7 @@ const Schedule = () => (
                 </td>
                 <td className="agenda-events">
                   <div className="agenda-event">
-                    La caminada (Yuliana & Dominic) 
+                    La caminada (Yuliana Basmajyan and Dominic Bridge) 
                   </div>
                 </td>
               </tr>
@@ -403,7 +419,7 @@ const Schedule = () => (
                 </td>
                 <td className="agenda-events">
                   <div className="agenda-event">
-                    La Caderas (Yuliana & Dominic) 
+                    La Caderas (Yuliana Basmajyan and Dominic Bridge) 
                   </div>
                 </td>
               </tr>
@@ -437,7 +453,7 @@ const Schedule = () => (
                   </div>
                 </td>
               </tr>
-              <tr>
+              <tr className="date-start">
                 <td className="agenda-date active" rowSpan="5">
                   <div className="dayofmonth">30</div>
                   <div className="dayofweek">Sunday</div>
@@ -448,7 +464,8 @@ const Schedule = () => (
                 </td>
                 <td className="agenda-events">
                   <div className="agenda-event">
-                    Giros! Tunning to both directions (Ronen & Dorit)
+                    Giros! Tunning to both directions
+                    (Ronen Khayat and Dorit Shalom)
                   </div>
                 </td>
               </tr>
@@ -458,7 +475,8 @@ const Schedule = () => (
                 </td>
                 <td className="agenda-events">
                   <div className="agenda-event">
-                    Ganchos made out of dynamic places (Ronen & Dorit) 
+                    Ganchos made out of dynamic places
+                    (Ronen Khayat and Dorit Shalom) 
                   </div>
                 </td>
               </tr>
@@ -468,7 +486,8 @@ const Schedule = () => (
                 </td>
                 <td className="agenda-events">
                   <div className="agenda-event">
-                    Sacadas (Yuliana & Dominic) 
+                    Sacadas
+                    (Yuliana Basmajyan and Dominic Bridge) 
                   </div>
                 </td>
               </tr>
@@ -478,17 +497,22 @@ const Schedule = () => (
                 </td>
                 <td className="agenda-events">
                   <div className="agenda-event">
-                    Colgadas (Yuliana & Dominic) 
+                    Colgadas
+                    (Yuliana Basmajyan and Dominic Bridge) 
                   </div>
                 </td>
               </tr>
               <tr>
                 <td className="agenda-time">
-                  7:00 PM - 2:00 AM
+                  <strong>
+                    7:00 PM - 2:00 AM
+                  </strong>
                 </td>
                 <td className="agenda-events">
                   <div className="agenda-event">
-                    Gala dinner (Asado) and Gala milonga 
+                    <strong>
+                      Gala dinner (Asado) and Gala milonga
+                    </strong> 
                   </div>
                 </td>
               </tr>

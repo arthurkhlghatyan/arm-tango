@@ -1,3 +1,5 @@
+import { graphql } from 'gatsby';
+
 export const hdImage = graphql`
   fragment squareImage on File {
     childImageSharp {

@@ -1,7 +1,8 @@
+import React from 'react';
 import Img from 'gatsby-image';
 
-export default ({ data }) => {
+export default ({ fluid }) => {
   return (
-    <Img fluid={data.file.imageSharp.fluid} />
+    <Img fluid={fluid} />
   );
 }

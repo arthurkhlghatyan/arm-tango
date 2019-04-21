@@ -1,9 +1,9 @@
 import { graphql } from 'gatsby';
 
 export const hdImage = graphql`
-  fragment squareImage on File {
+  fragment hdImage on File {
     childImageSharp {
-      fluid(maxWidth: 1920, maxHeight: 1080) {
+      fluid(maxWidth: 1920, maxHeight: 1100) {
         ...GatsbyImageSharpFluid_withWebp
       }
     }

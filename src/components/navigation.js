@@ -23,7 +23,9 @@ const Navigation = ({ siteTitle }) => (
             <NavDropdown.Item as={Link} to="/djs">DJs</NavDropdown.Item>
             <NavDropdown.Item as={Link} to="/orchestra">Orchestra</NavDropdown.Item>
             <NavDropdown.Item as={Link} to="/maestros">Teachers/Dancers</NavDropdown.Item>
-            <NavDropdown.Item as={Link} to="/locations">Locations</NavDropdown.Item>
+            <NavDropdown.Item as={Link} to="/venues-and-locations">
+              Venues and Locations
+            </NavDropdown.Item>
           </NavDropdown>
           <NavDropdown title="Schedule">
             <NavDropdown.Item as={Link} to="/calendar">Calendar</NavDropdown.Item>
@@ -35,6 +37,9 @@ const Navigation = ({ siteTitle }) => (
             </NavDropdown.Item>
             <NavDropdown.Item as={Link} to="/workshops-and-milongas">
               Workshops and milongas
+            </NavDropdown.Item>
+            <NavDropdown.Item as={Link} to="/yerevan-hotels">
+              Yerevan Hotels
             </NavDropdown.Item>
           </NavDropdown>
           <Nav.Link as={Link} to="/partners">Partners</Nav.Link>

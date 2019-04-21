@@ -1,12 +1,12 @@
 import React from 'react';
-import { StaticQuery, Link, graphql } from 'gatsby';
+import { Link, graphql } from 'gatsby';
+import Img from 'gatsby-image';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 import Header from '../components/header';
 import HomeSection from '../components/home-section';
-import Image from '../components/image';
 
-const render = (data) => (
+const IndexPage = ({ data }) => (
   <Layout>
     <SEO
       title="Home"
@@ -21,7 +21,7 @@ const render = (data) => (
         The festival includes two weekends of workshops, milongas, after-parties, and guided tours of the capital city and the regions.`
       }
     >
-      <Image fluid={data.festivalImage.childImageSharp.fluid} />
+      <Img fluid={data.festivalImage.childImageSharp.fluid} />
     </HomeSection>
     <HomeSection
       title="About Armenia"
@@ -42,24 +42,24 @@ const render = (data) => (
   </Layout>
 );
 
-const IndexPage = () => (
-  <StaticQuery
-    query={graphql`
-      query {
-        posterImage: file(relativePath: { eq: "tango-poster.jpg" }) {
-          ...hdImage
-        },
-        festivalImage: file(relativePath: { eq: "festival-image.jpg" }) {
-          childImageSharp {
-            fluid(maxWidth: 690, maxHeight: 403) {
-              ...GatsbyImageSharpFluid_withWebp
-            }
-          }
+
+export const query = graphql`
+  query IndexPageQuery {
+    posterImage: file(relativePath: { eq: "poster.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1920, quality: 100) {
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
-    `}
-    render={render}
-  />
-);
+    },
+    festivalImage: file(relativePath: { eq: "festival.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 690, quality: 100) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+  }
+`;
 
 export default IndexPage;

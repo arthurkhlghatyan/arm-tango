@@ -1,10 +1,11 @@
 import React from 'react';
+import Img from 'gatsby-image';
 
 const GridItem = ({
   slug,
   title,
   description,
-  thumbnailSrc,
+  thumbnailFluid,
   hasVideos,
   onReadMoreClick,
   onSeePhotosClick,
@@ -34,12 +35,12 @@ const GridItem = ({
   return (
     <div className="col-lg-4">
       <div className="card mb-4 box-shadow">
-        <img
+        <Img
           className="card-img-top"
-          alt="Thumbnail [100%x225]"
-          style={{ height: 225, width: '100%', display: 'block' }}
+          alt={title}
+          style={{ width: '100%', display: 'block' }}
           data-holder-rendered="true"
-          src={thumbnailSrc}
+          fluid={thumbnailFluid}
         />
         <div className="card-body">
           <p className="card-text">

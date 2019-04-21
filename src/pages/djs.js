@@ -1,60 +1,81 @@
 import React, { Component } from 'react';
+import { graphql } from 'gatsby';
+import Img from 'gatsby-image';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
+import GridItem from '../components/grid-item';
+import Jumbotron from '../components/jumbotron';
+import GridLayout from '../components/grid-layout';
 import Modal from 'react-bootstrap/Modal';
-import LucaLambertDj from '../images/luca-lambert-dj.jpg';
-import MihranSigaherDj from '../images/mihran-sigaher.jpg';
-import TatianaGordinscaya from '../images/tatiana-gordinscaya.jpg';
 import biographies from '../data/biographies';
 
-// Slider images
-import LucamLambert1 from '../images/slides/luca-lambert/1.jpg';
-import LucamLambert2 from '../images/slides/luca-lambert/2.jpg';
-import LucamLambert3 from '../images/slides/luca-lambert/3.jpg';
-import LucamLambert4 from '../images/slides/luca-lambert/4.jpg';
-import LucamLambert5 from '../images/slides/luca-lambert/5.jpg';
-import LucamLambert6 from '../images/slides/luca-lambert/6.jpg';
-
-import MihranSigaher1 from '../images/slides/mihran-sigaher/1.jpg';
-import MihranSigaher2 from '../images/slides/mihran-sigaher/2.jpg';
-import MihranSigaher3 from '../images/slides/mihran-sigaher/3.jpg';
-import MihranSigaher4 from '../images/slides/mihran-sigaher/4.jpg';
-
-import TatianaGordinscaya1 from '../images/slides/tatiana-gordinscaya/1.jpg';
-import TatianaGordinscaya2 from '../images/slides/tatiana-gordinscaya/2.jpg';
-
-class DJS extends Component {
+class DJs extends Component {
   state = {
-    show: false,
+    showBio: false,
     showGallery: false,
-    djName: '',
-    galleryDjName: 'luca-lamberti',
+    bioItemName: 'luca-lamberti',
+    galleryItemName: 'luca-lamberti',
   };
 
-  images = {
-    'luca-lamberti': [
-      LucamLambert1,
-      LucamLambert2,
-      LucamLambert3,
-      LucamLambert4,
-      LucamLambert5,
-      LucamLambert6,
-    ],
-    'mihran-sigaher': [
-      MihranSigaher1,
-      MihranSigaher2,
-      MihranSigaher3,
-      MihranSigaher4,
-    ],
-    'tatiana-gordinscaya': [
-      TatianaGordinscaya1,
-      TatianaGordinscaya2,
-    ],
+  page = {
+    title: 'DJs',
+    keywords: [`tango`, `#ArmTangoFest2019`, `maestros`],
+    description: `
+      Famous DJs will lead us into the majestic tango world.
+    `,
   };
 
-  handleClose = () => {
+  data = {
+    'luca-lamberti': {
+      title: 'Luca Lamberti',
+      graphAlias: 'lucaLamberti',
+      description: `
+        Luca is a well known tango DJ, teacher, and dancer in the European tango circuit.
+        Luca has been around to Europe, middle East and Asia spreading his unique spiritual approach to tango.
+        Dancing since the year 2000 and studying with key tango world figures.
+        Luca has been the organizer of Tangocamp Italy since 2009 and a key figure in the other 3 tango camp festivals.
+        Organising also Roman holiday tango marathon in Rome.
+      `,
+    },
+    'mihran-sigaher': {
+      title: 'Mihran Sigaher',
+      graphAlias: 'mihranSigaher',
+      description: `
+        Improved himself by gathering information about tango and tango music archives from orchestras since 2006 his start to tango,
+        Mihran began DJing at 2008.
+        From 2008 to the present, he has been playing music in Turkey, Italy, Romania, Bulgaria and Greece milongas.
+        Mihran brings tango dancers and audiences together with various orchestras by blending rhythm and melody in appropriate proportions.
+      `,
+    },
+    'tatiana-gordinscaia': {
+      title: 'Tatiana Gordinscaya',
+      graphAlias: 'tatianaGordinscaia',
+      description: `
+        Tatiana was started to dance argentinian tango 8 years ago and at the moment she has felt that tango is a dance of her soul
+        she decided to found first argentinian tango school in Moldova.
+        After she visited Buenos Aires, she decided that to put music on milongas is an art,
+        and one part of this art is to create atmosphere of small Buenos Aires at the milonga.
+      `,
+    },
+  };
+
+  openReadMore = (bioItemName) => {
     this.setState({
-      show: false,
+      showBio: true,
+      bioItemName,
+    });
+  };
+
+  openGallery = (galleryItemName) => {
+    this.setState({
+      showGallery: true,
+      galleryItemName,
+    });
+  };
+
+  handleBioClose = () => {
+    this.setState({
+      showBio: false,
     });
   };
 
@@ -64,185 +85,168 @@ class DJS extends Component {
     });
   };
 
-  openReadMoreModal = (djName) => {
-    this.setState({
-      show: true,
-      djName,
-    });
+  findThumbnail = (slug) => {
+    const thumbnails = this.props.data.thumbnails.edges;
+    const length = thumbnails.length;
+
+    for (let i = 0; i < length; i += 1) {
+      if (thumbnails[i].node.name === slug) {
+        return thumbnails[i].node.childImageSharp.fluid;
+      }
+    }
+
+    return false;
   };
 
-  openGalleryModal = (galleryDjName) => {
-    this.setState({
-      showGallery: true,
-      galleryDjName,
-    });
-  };
+  renderGalleryImages() {
+    const { galleryItemName } = this.state;
+    const { graphAlias } = this.data[galleryItemName];
+    const images = this.props.data[`${graphAlias}Slides`].edges;
+
+    const map = (item, index) => {
+      return (
+        <div key={index} className="mb-3 pics animation all 2">
+          <Img className="img-fluid" fluid={item.node.childImageSharp.fluid} />
+        </div>
+      );
+    };
+
+    return images.map(map);
+  }
+
+  renderGalleryModal() {
+    const { showGallery } = this.state;
+
+    return (
+      <Modal show={showGallery} onHide={this.handleGalleryClose}>
+        <Modal.Header closeButton>
+          <Modal.Title>Gallery</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <div className="gallery" id="gallery">
+            {this.renderGalleryImages()}
+          </div>
+        </Modal.Body>
+      </Modal>
+    );
+  }
+
+  renderBioModal() {
+    const { showBio, bioItemName } = this.state;
+
+    return (
+      <Modal show={showBio} onHide={this.handleBioClose}>
+        <Modal.Header closeButton>
+          <Modal.Title>Biography</Modal.Title>
+        </Modal.Header>
+        <Modal.Body dangerouslySetInnerHTML={{ __html: biographies[bioItemName] }} />
+      </Modal>
+    );
+  }
+
+  renderItems() {
+    const items = [
+      'luca-lamberti',
+      'mihran-sigaher',
+      'tatiana-gordinscaia',
+    ];
+
+    const map = (slug, index) => {
+      const item = this.data[slug];
+      const {
+        title,
+        description,
+      } = item;
+
+      return (
+        <GridItem
+          key={index}
+          slug={slug}
+          title={title}
+          description={description}
+          thumbnailFluid={this.findThumbnail(slug)}
+          onReadMoreClick={this.openReadMore.bind(this, slug)}
+          onSeePhotosClick={this.openGallery.bind(this, slug)}
+        />
+      );
+    };
+
+    return items.map(map);
+  }
 
   render() {
-    const { show, showGallery, djName, galleryDjName } = this.state;
-    
+    const { title, description, keywords } = this.page;
+    const { data } = this.props;
+
     return (
       <Layout>
         <SEO
-          title="DJs"
-          keywords={[`tango`, `#ArmTangoFest2019`, `djs`]}
+          title={title}
+          keywords={keywords}
         />
-        <section className="jumbotron text-center">
-          <div className="container">
-            <h1 className="jumbotron-heading">DJs</h1>
-            <p className="lead text-muted">
-              Leading Tango DJs are going to participate.
-            </p>
-          </div>
-        </section>
-        <div className="album py-5 bg-light">
-          <div className="container">
-            <div className="row">
-              <div className="col-md-4">
-                <div className="card mb-4 box-shadow">
-                  <img
-                    className="card-img-top"
-                    alt="Thumbnail [100%x225]"
-                    style={{ height: 225, width: '100%', display: 'block' }}
-                    data-holder-rendered="true"
-                    src={LucaLambertDj}
-                  />
-                  <div className="card-body">
-                    <p className="card-text">
-                      <strong>
-                        Luca Lamberti
-                      </strong>
-                    </p>
-                    <p className="card-text">
-                      Luca is a well known tango DJ, teacher, and dancer in the European tango circuit.
-                      Luca has been around to Europe, middle East and Asia spreading his unique spiritual approach to tango.
-                      Dancing since the year 2000 and studying with key tango world figures.
-                      Luca has been the organizer of Tangocamp Italy since 2009 and a key figure in the other 3 tango camp festivals.
-                      Organising also Roman holiday tango marathon in Rome.
-                    </p>
-                    <div className="d-flex justify-content-between align-items-center">
-                      <div className="btn-group">
-                        <button
-                          onClick={this.openReadMoreModal.bind(this, 'luca-lamberti')}
-                          type="button"
-                          className="btn btn-sm btn-outline-secondary">
-                          Read More
-                        </button>
-                        <button
-                          onClick={this.openGalleryModal.bind(this, 'luca-lamberti')}
-                          type="button"
-                          className="btn btn-sm btn-outline-secondary">
-                          See Photos
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="col-md-4">
-                <div className="card mb-4 box-shadow">
-                  <img
-                    className="card-img-top"
-                    alt="Thumbnail [100%x225]"
-                    style={{ height: 225, width: '100%', display: 'block' }}
-                    data-holder-rendered="true"
-                    src={MihranSigaherDj}
-                  />
-                  <div className="card-body">
-                    <p className="card-text">
-                      <strong>
-                        Mihran Sigaher
-                      </strong>
-                    </p>
-                    <p className="card-text">
-                        Improved himself by gathering information about tango and tango music archives from  orchestras since 2006 his start to tango, Mihran began DJing at  2008. 
-                        From 2008 to the present, he has been playing music in Turkey, Italy, Romania, Bulgaria and Greece milongas. Mihran brings tango dancers and audiences together with various orchestras by blending rhythm and melody in appropriate proportions.
-                      </p>
-                    <div className="d-flex justify-content-between align-items-center">
-                      <div className="btn-group">
-                        <button
-                          onClick={this.openReadMoreModal.bind(this, 'mihran-sigaher')}
-                          type="button"
-                          className="btn btn-sm btn-outline-secondary">
-                          Read More
-                        </button>
-                        <button
-                          onClick={this.openGalleryModal.bind(this, 'mihran-sigaher')}
-                          type="button"
-                          className="btn btn-sm btn-outline-secondary">
-                          See Photos
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="col-md-4">
-                <div className="card mb-4 box-shadow">
-                  <img
-                    className="card-img-top"
-                    alt="Thumbnail [100%x225]"
-                    style={{ height: 225, width: '100%', display: 'block' }}
-                    data-holder-rendered="true"
-                    src={TatianaGordinscaya}
-                  />
-                  <div className="card-body">
-                    <p className="card-text">
-                      <strong>
-                        Tatiana Gordinscaya
-                      </strong>
-                    </p>
-                    <p className="card-text">
-                        Tatiana was started to dance argentinian tango 8 years ago and at the moment she has felt that tango is a dance of her soul she decided to found first argentinian tango school in Moldova.
-                        After she visited Buenos Aires, she decided that to put music on milongas is an art, and one part of this art is to create atmosphere of small Buenos Aires at the milonga.
-                      </p>
-                    <div className="d-flex justify-content-between align-items-center">
-                      <div className="btn-group">
-                        <button
-                          onClick={this.openReadMoreModal.bind(this, 'tatiana-gordinscaya')}
-                          type="button"
-                          className="btn btn-sm btn-outline-secondary">
-                          Read More
-                        </button>
-                        <button
-                          onClick={this.openGalleryModal.bind(this, 'tatiana-gordinscaya')}
-                          type="button"
-                          className="btn btn-sm btn-outline-secondary">
-                          See Photos
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <Modal show={show} onHide={this.handleClose}>
-          <Modal.Header closeButton>
-            <Modal.Title>Biography</Modal.Title>
-          </Modal.Header>
-          <Modal.Body dangerouslySetInnerHTML={{ __html: biographies[djName] }} />
-        </Modal>
-        <Modal show={showGallery} onHide={this.handleGalleryClose}>
-          <Modal.Header closeButton>
-            <Modal.Title>Gallery</Modal.Title>
-          </Modal.Header>
-          <Modal.Body>
-            <div className="gallery" id="gallery">
-              {this.images[galleryDjName].map((item, index) => {
-                return (
-                  <div key={index} className="mb-3 pics animation all 2">
-                    <img className="img-fluid" src={item} />
-                  </div>
-                );
-              })}
-            </div>
-          </Modal.Body>
-        </Modal>
+        <Jumbotron title={title} description={description} />
+        <GridLayout>
+          {this.renderItems()}
+        </GridLayout>
+        {this.renderBioModal()}
+        {this.renderGalleryModal()}
       </Layout>
     );
   }
 }
 
-export default DJS;
+export const query = graphql`
+  query DJsQuery {
+    thumbnails: allFile(
+      filter: {
+        sourceInstanceName: { eq: "images" }
+        relativeDirectory: { eq: "thumbnails/djs" }
+      }
+    ) {
+      edges {
+        node {
+          ...thumbnail
+          name
+        }
+      }
+    }
+    lucaLambertiSlides: allFile(
+      filter: {
+        sourceInstanceName: { eq: "images" }
+        relativeDirectory: { eq: "slides/luca-lamberti" }
+      }
+    ) {
+      edges {
+        node {
+          ...galleryImage
+        }
+      }
+    }
+    mihranSigaherSlides: allFile(
+      filter: {
+        sourceInstanceName: { eq: "images" }
+        relativeDirectory: { eq: "slides/mihran-sigaher" }
+      }
+    ) {
+      edges {
+        node {
+          ...galleryImage
+        }
+      }
+    }
+    tatianaGordinscaiaSlides: allFile(
+      filter: {
+        sourceInstanceName: { eq: "images" }
+        relativeDirectory: { eq: "slides/tatiana-gordinscaia" }
+      }
+    ) {
+      edges {
+        node {
+          ...galleryImage
+        }
+      }
+    }
+  }
+`;
+
+export default DJs;

@@ -1,42 +1,13 @@
 import React, { Component } from 'react';
+import { graphql } from 'gatsby';
+import Img from 'gatsby-image';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 import GridItem from '../components/grid-item';
+import Jumbotron from '../components/jumbotron';
+import GridLayout from '../components/grid-layout';
 import Modal from 'react-bootstrap/Modal';
 import biographies from '../data/biographies';
-
-// Thumbnails
-import yulianaBasmajyanThumb from '../images/yuliana-basmajyan.jpg';
-import ronenDoritThumb from '../images/ronen-dorit.jpg';
-import dominicBridgeThumb from '../images/dominic-bridge.jpg';
-import tatianaPavelThumb from '../images/tatiana-pavel.jpg';
-
-// Slider images
-import YulianaBasmajyan1 from '../images/slides/yuliana-basmajyan/1.jpg';
-import YulianaBasmajyan2 from '../images/slides/yuliana-basmajyan/2.jpg';
-import YulianaBasmajyan3 from '../images/slides/yuliana-basmajyan/3.jpg';
-import YulianaBasmajyan4 from '../images/slides/yuliana-basmajyan/4.jpg';
-import YulianaBasmajyan5 from '../images/slides/yuliana-basmajyan/5.jpg';
-
-// Slider images
-import DominicBridge1 from '../images/slides/dominic-bridge/1.jpg';
-import DominicBridge2 from '../images/slides/dominic-bridge/2.jpg';
-import DominicBridge3 from '../images/slides/dominic-bridge/3.jpg';
-import DominicBridge4 from '../images/slides/dominic-bridge/4.jpg';
-import DominicBridge5 from '../images/slides/dominic-bridge/5.jpg';
-
-import RonenDorit1 from '../images/slides/ronen-dorit/1.jpg';
-import RonenDorit2 from '../images/slides/ronen-dorit/2.jpg';
-import RonenDorit3 from '../images/slides/ronen-dorit/3.jpg';
-import RonenDorit4 from '../images/slides/ronen-dorit/4.jpg';
-import RonenDorit5 from '../images/slides/ronen-dorit/5.jpg';
-import RonenDorit6 from '../images/slides/ronen-dorit/6.jpg';
-
-import TatianaPavel1 from '../images/slides/tatiana-pavel/1.jpg';
-import TatianaPavel2 from '../images/slides/tatiana-pavel/2.jpg';
-import TatianaPavel3 from '../images/slides/tatiana-pavel/3.jpg';
-
-
 
 class Maestros extends Component {
   state = {
@@ -59,19 +30,12 @@ class Maestros extends Component {
   data = {
     'yuliana-basmajyan': {
       title: 'Yuliana Basmajyan',
+      graphAlias: 'yulianaBasmajyan',
       description: `
         Born and raised in Armenia, Yuliana Basmajyan immigrated to the US in her early adolescent years.
         For many years she tested her skills in different dance forms including modern, jazz, flamenco, and extensive training in Salsa.
         After several years of Latin dancing she discovered her true calling, a dance that truly inspired and challenged her…Tango.
       `,
-      thumbnailSrc: yulianaBasmajyanThumb,
-      images: [
-        YulianaBasmajyan1,
-        YulianaBasmajyan2,
-        YulianaBasmajyan3,
-        YulianaBasmajyan4,
-        YulianaBasmajyan5,
-      ],
       videos: [
         'HDJYm2okrbo',
         'vi1ZDL8aBMI',
@@ -85,14 +49,7 @@ class Maestros extends Component {
         cultural events, and offered workshops in over a dozen countries around the world,
         including Buenos Aires.
       `,
-      thumbnailSrc: dominicBridgeThumb,
-      images: [
-        DominicBridge1,
-        DominicBridge2,
-        DominicBridge3,
-        DominicBridge4,
-        DominicBridge5,
-      ],
+      graphAlias: 'dominicBridge',
       videos: [
         'XOHGiT-xaBM',
         '1cdtb-yrZxY',
@@ -106,15 +63,7 @@ class Maestros extends Component {
         A strong emphasis on embrace, deep and real connection and uncompromised passion create their special and unique art of tango.
         Within this ambient they teach their tango classes with a nice combination of excellent didactic skills and the feeling of the love of the dance and the never ending joy of it.
       `,
-      thumbnailSrc: ronenDoritThumb,
-      images: [
-        RonenDorit1,
-        RonenDorit2,
-        RonenDorit3,
-        RonenDorit4,
-        RonenDorit5,
-        RonenDorit6,
-      ],
+      graphAlias: 'ronenDorit',
       videos: [
         'QmWUVDlK1wk',
         'ABsTgrSARJQ',
@@ -125,12 +74,7 @@ class Maestros extends Component {
       description: `
         Tatiana & Pavel dancing together since year 2013. Tatiana founded first school of Argentinean tango in Moldova in 2010, and also organized 3 big festivals and 3 marathons, common known as MADT.
       `,
-      thumbnailSrc: tatianaPavelThumb,
-      images: [
-        TatianaPavel1,
-        TatianaPavel2,
-        TatianaPavel3,
-      ],
+      graphAlias: 'tatianaPavel',
       videos: [
         'OytWpIZnYq8',
       ],
@@ -176,6 +120,19 @@ class Maestros extends Component {
     });
   };
 
+  findThumbnail = (slug) => {
+    const thumbnails = this.props.data.thumbnails.edges;
+    const length = thumbnails.length;
+
+    for (let i = 0; i < length; i += 1) {
+      if (thumbnails[i].node.name === slug) {
+        return thumbnails[i].node.childImageSharp.fluid;
+      }
+    }
+
+    return false;
+  };
+
   renderVideos() {
     const { videoItemName } = this.state;
     const { videos } = this.data[videoItemName];
@@ -197,7 +154,7 @@ class Maestros extends Component {
     const { showVideos } = this.state;
 
     return (
-      <Modal show={showVideoModal} onHide={this.handleVideosClose}>
+      <Modal show={showVideos} onHide={this.handleVideosClose}>
         <Modal.Header closeButton>
           <Modal.Title>Videos</Modal.Title>
         </Modal.Header>
@@ -210,12 +167,13 @@ class Maestros extends Component {
 
   renderGalleryImages() {
     const { galleryItemName } = this.state;
-    const { images } = this.data[galleryItemName];
+    const { graphAlias } = this.data[galleryItemName];
+    const images = this.props.data[`${graphAlias}Slides`].edges;
 
     const map = (item, index) => {
       return (
         <div key={index} className="mb-3 pics animation all 2">
-          <img className="img-fluid" src={item} />
+          <Img className="img-fluid" fluid={item.node.childImageSharp.fluid} />
         </div>
       );
     };
@@ -266,7 +224,6 @@ class Maestros extends Component {
       const {
         title,
         description,
-        thumbnailSrc,
       } = item;
 
       return (
@@ -275,10 +232,11 @@ class Maestros extends Component {
           slug={slug}
           title={title}
           description={description}
-          thumbnailSrc={thumbnailSrc}
+          hasVideos
+          thumbnailFluid={this.findThumbnail(slug)}
           onReadMoreClick={this.openReadMore.bind(this, slug)}
           onSeePhotosClick={this.openGallery.bind(this, slug)}
-          openWatchVideos={this.openWatchVideos.bind(this, slug)}
+          onWatchVideosClick={this.openWatchVideos.bind(this, slug)}
         />
       );
     };
@@ -287,30 +245,91 @@ class Maestros extends Component {
   }
 
   render() {
+    const { title, description, keywords } = this.page;
+    const { data } = this.props;
+
     return (
       <Layout>
         <SEO
-          title={this.page.title}
-          keywords={this.page.keywords}
+          title={title}
+          keywords={keywords}
         />
-        <section className="jumbotron text-center">
-          <div className="container">
-            <h1 className="jumbotron-heading">{this.page.title}</h1>
-            <p className="lead text-muted">
-              {this.page.description}
-            </p>
-          </div>
-        </section>
-        <div className="album py-5 bg-light">
-          <div className="container">
-            <div className="row">
-              {this.renderItems()}
-            </div>
-          </div>
-        </div>
+        <Jumbotron title={title} description={description} />
+        <GridLayout>
+          {this.renderItems()}
+        </GridLayout>
+        {this.renderBioModal()}
+        {this.renderGalleryModal()}
+        {this.renderVideoModal()}
       </Layout>
     );
   }
 }
+
+export const query = graphql`
+  query MaestrosQuery {
+    thumbnails: allFile(
+      filter: {
+        sourceInstanceName: { eq: "images" }
+        relativeDirectory: { eq: "thumbnails/maestros" }
+      }
+    ) {
+      edges {
+        node {
+          ...thumbnail
+          name
+        }
+      }
+    }
+    yulianaBasmajyanSlides: allFile(
+      filter: {
+        sourceInstanceName: { eq: "images" }
+        relativeDirectory: { eq: "slides/yuliana-basmajyan" }
+      }
+    ) {
+      edges {
+        node {
+          ...galleryImage
+        }
+      }
+    }
+    dominicBridgeSlides: allFile(
+      filter: {
+        sourceInstanceName: { eq: "images" }
+        relativeDirectory: { eq: "slides/dominic-bridge" }
+      }
+    ) {
+      edges {
+        node {
+          ...galleryImage
+        }
+      }
+    }
+    ronenDoritSlides: allFile(
+      filter: {
+        sourceInstanceName: { eq: "images" }
+        relativeDirectory: { eq: "slides/ronen-dorit" }
+      }
+    ) {
+      edges {
+        node {
+          ...galleryImage
+        }
+      }
+    }
+    tatianaPavelSlides: allFile(
+      filter: {
+        sourceInstanceName: { eq: "images" }
+        relativeDirectory: { eq: "slides/tatiana-pavel" }
+      }
+    ) {
+      edges {
+        node {
+          ...galleryImage
+        }
+      }
+    }
+  }
+`;
 
 export default Maestros;

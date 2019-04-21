@@ -11,6 +11,10 @@ h6 {
   @include heading-font;
 }
 
+.jumbotron {
+  margin-bottom: 0px;
+}
+
 .btn-xl {
   text-transform: uppercase;
   padding: 1.5rem 3rem;

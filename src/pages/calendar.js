@@ -1,7 +1,6 @@
 import React from 'react';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
-import Floor14thImg from '../images/14th-floor.jpg';
 
 const Schedule = () => (
   <Layout>

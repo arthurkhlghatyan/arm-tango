@@ -55,7 +55,7 @@ const Packages = () => (
                 <li>Tsakhkadzor resort weekend</li>
                 <li>Yerevan Tango Festival</li>
                 <li>3 milongas + 5 workshops</li>
-                <li>Tango Tour(5 night/6 day)</li>
+                <li>Tango Tour 5 days</li>
                 <li>7 milongas + 5 workshops</li>
               </ul>
               <button

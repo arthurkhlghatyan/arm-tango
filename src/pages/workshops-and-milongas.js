@@ -68,15 +68,39 @@ const WorkshopsAndMilongas = () => (
             </tr>
             <tr>
               <th scope="row">Yerevan milongas + 3 workshops</th>
-              <td>€75</td>
-              <td>€90</td>
-              <td>€120</td>
+              <td>
+                <strong>
+                  €75
+                </strong>
+              </td>
+              <td>
+                <strong>
+                  €90
+                </strong>
+              </td>
+              <td>
+                <strong>
+                  €120
+                </strong>
+              </td>
             </tr>
             <tr>
               <th scope="row">Yerevan milongas + 5 workshops</th>
-              <td>€125</td>
-              <td>€150</td>
-              <td>€185</td>
+              <td>
+                <strong>
+                  €105
+                </strong>
+              </td>
+              <td>
+                <strong>
+                  €130
+                </strong>
+              </td>
+              <td>
+                <strong>
+                  €165
+                </strong>
+              </td>
             </tr>
             <tr>
               <th scope="row">Tsakhkadzor milongas + 4 workshops</th>

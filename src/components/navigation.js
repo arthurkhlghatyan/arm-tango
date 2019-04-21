@@ -42,7 +42,6 @@ const Navigation = ({ siteTitle }) => (
               Yerevan Hotels
             </NavDropdown.Item>
           </NavDropdown>
-          <Nav.Link as={Link} to="/partners">Partners</Nav.Link>
           <Nav.Link as={Link} to="/contact-us">Contact Us</Nav.Link>
         </Nav>
       </Navbar.Collapse>

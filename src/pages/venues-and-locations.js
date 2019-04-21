@@ -5,19 +5,12 @@ import biographies from '../data/biographies';
 import Modal from 'react-bootstrap/Modal';
 
 // Thumbnail images
-import AraratHotelImg from '../images/ararat-hotel.jpg';
 import Floor14thHotelImg from '../images/floor14th-hotel.jpg';
+import TsakhkadzorComplexImg from '../images/tsakhkadzor-complex.jpg';
 import OrchestraImg from '../images/orchestra.jpg';
+import AraratHotelImg from '../images/ararat-hotel.jpg';
 
 // Slides
-import AraratHotel1 from '../images/slides/ararat-hotel/1.jpg';
-import AraratHotel2 from '../images/slides/ararat-hotel/2.jpg';
-import AraratHotel3 from '../images/slides/ararat-hotel/3.jpg';
-import AraratHotel4 from '../images/slides/ararat-hotel/4.jpg';
-import AraratHotel5 from '../images/slides/ararat-hotel/5.jpg';
-import AraratHotel6 from '../images/slides/ararat-hotel/6.jpg';
-import AraratHotel7 from '../images/slides/ararat-hotel/7.jpg';
-
 import Floor14thHotel1 from '../images/slides/14th-floor/1.jpg';
 import Floor14thHotel2 from '../images/slides/14th-floor/2.jpg';
 import Floor14thHotel3 from '../images/slides/14th-floor/3.jpg';
@@ -25,6 +18,23 @@ import Floor14thHotel4 from '../images/slides/14th-floor/4.jpg';
 import Floor14thHotel5 from '../images/slides/14th-floor/5.jpg';
 import Floor14thHotel6 from '../images/slides/14th-floor/6.jpg';
 import Floor14thHotel7 from '../images/slides/14th-floor/7.jpg';
+
+import TsakhkadzorComplex1 from '../images/slides/tsakhkadzor-complex/1.jpg';
+import TsakhkadzorComplex2 from '../images/slides/tsakhkadzor-complex/2.jpg';
+import TsakhkadzorComplex3 from '../images/slides/tsakhkadzor-complex/3.jpg';
+import TsakhkadzorComplex4 from '../images/slides/tsakhkadzor-complex/4.jpg';
+import TsakhkadzorComplex5 from '../images/slides/tsakhkadzor-complex/5.jpg';
+import TsakhkadzorComplex6 from '../images/slides/tsakhkadzor-complex/6.jpg';
+import TsakhkadzorComplex7 from '../images/slides/tsakhkadzor-complex/7.jpg';
+import TsakhkadzorComplex8 from '../images/slides/tsakhkadzor-complex/8.jpg';
+
+import AraratHotel1 from '../images/slides/ararat-hotel/1.jpg';
+import AraratHotel2 from '../images/slides/ararat-hotel/2.jpg';
+import AraratHotel3 from '../images/slides/ararat-hotel/3.jpg';
+import AraratHotel4 from '../images/slides/ararat-hotel/4.jpg';
+import AraratHotel5 from '../images/slides/ararat-hotel/5.jpg';
+import AraratHotel6 from '../images/slides/ararat-hotel/6.jpg';
+import AraratHotel7 from '../images/slides/ararat-hotel/7.jpg';
 
 import PhilarmonicOrchestra1 from '../images/slides/philarmonic-orchestra/1.jpg';
 import PhilarmonicOrchestra2 from '../images/slides/philarmonic-orchestra/2.jpg';
@@ -39,15 +49,6 @@ class VenuesAndLocations extends Component {
   };
 
   images = {
-    'ararat-hotel': [
-      AraratHotel1,
-      AraratHotel2,
-      AraratHotel3,
-      AraratHotel4,
-      AraratHotel5,
-      AraratHotel6,
-      AraratHotel7,
-    ],
     'floor14th-hotel': [
       Floor14thHotel1,
       Floor14thHotel2,
@@ -57,10 +58,29 @@ class VenuesAndLocations extends Component {
       Floor14thHotel6,
       Floor14thHotel7,
     ],
+    'tsakhkadzor-complex': [
+      TsakhkadzorComplex1,
+      TsakhkadzorComplex2,
+      TsakhkadzorComplex3,
+      TsakhkadzorComplex4,
+      TsakhkadzorComplex5,
+      TsakhkadzorComplex6,
+      TsakhkadzorComplex7,
+      TsakhkadzorComplex8,
+    ],
     'philarmonic-orchestra': [
       PhilarmonicOrchestra1,
       PhilarmonicOrchestra2,
       PhilarmonicOrchestra3,
+    ],
+    'ararat-hotel': [
+      AraratHotel1,
+      AraratHotel2,
+      AraratHotel3,
+      AraratHotel4,
+      AraratHotel5,
+      AraratHotel6,
+      AraratHotel7,
     ],
   };
 
@@ -165,22 +185,22 @@ class VenuesAndLocations extends Component {
                   <div className="card-body">
                     <p className="card-text">
                       <strong>
-                        Ararat Hotel
+                        Tsakhkadzor Sport Complex
                       </strong>
                     </p>
                     <p className="card-text">
-                      Ararat Hotel is not just a hotel, it’s a complex providing a wide range of hotel services as well as other attractive ways of rest and relaxation.
+                      Located on the south-west slope of Mount Teghenis, this hotel offers a sports center with Olympic-size pool, and rooms with a view of the forest or valley.
                     </p>
                     <div className="d-flex justify-content-between align-items-center">
                       <div className="btn-group">
                         <button
                           type="button"
                           className="btn btn-sm btn-outline-secondary"
-                          onClick={this.openReadMoreModal.bind(this, 'ararat-hotel')}>
+                          onClick={this.openReadMoreModal.bind(this, 'tsakhkadzor-complex')}>
                           Read More
                         </button>
                         <button
-                          onClick={this.openGalleryModal.bind(this, 'ararat-hotel')}
+                          onClick={this.openGalleryModal.bind(this, 'tsakhkadzor-complex')}
                           type="button"
                           className="btn btn-sm btn-outline-secondary">
                           See Photos

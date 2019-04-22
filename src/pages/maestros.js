@@ -172,9 +172,10 @@ class Maestros extends Component {
 
     const map = (item, index) => {
       return (
-        <div key={index} className="mb-3 pics animation all 2">
-          <Img className="img-fluid" fluid={item.node.childImageSharp.fluid} />
-        </div>
+        <Img
+          className="mb-3 pics animation all 2"
+          key={index}
+          fluid={item.node.childImageSharp.fluid} />
       );
     };
 

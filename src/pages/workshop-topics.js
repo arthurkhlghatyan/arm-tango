@@ -27,7 +27,7 @@ const WorkshopTopics = () => (
             <tr>
               <td>
                 <p>
-                  Make the walk Great again    
+                  Make the walk Great again
                 </p>
                 <p>
                   La Caminada

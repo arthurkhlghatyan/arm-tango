@@ -25,6 +25,12 @@ const WorkshopsAndMilongas = () => (
           </thead>
           <tbody>
             <tr>
+              <th scope="row">Workshop prices</th>
+              <td>€15</td>
+              <td>€18</td>
+              <td>€25</td>
+            </tr>
+            <tr>
               <th scope="row">Opening milonga</th>
               <td>€18</td>
               <td>€20</td>

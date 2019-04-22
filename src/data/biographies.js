@@ -5,7 +5,9 @@ import TsakhkadzorComplex from './biographies/tsakhkadzor-complex';
 import Aires from './biographies/aires';
 import Enokavan from './biographies/enokavan';
 import ParzLake from './biographies/parz-lake';
+import Jockey from './biographies/jockey';
 import HorseRiding from './biographies/horse-riding';
+import Kangar from './biographies/kangar';
 import YulianaBasmajyan from './biographies/yuliana-basmajyan';
 import DominicBridge from './biographies/dominic-bridge';
 import RonenDorit from './biographies/ronen-dorit';
@@ -26,6 +28,8 @@ export default {
   'enokavan': Enokavan,
   'parz-lake': ParzLake,
   'horse-riding': HorseRiding,
+  'jockey': Jockey,
+  'kangar': Kangar,
   'yuliana-basmajyan': YulianaBasmajyan,
   'dominic-bridge': DominicBridge,
   'ronen-dorit': RonenDorit,

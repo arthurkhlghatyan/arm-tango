@@ -30,6 +30,12 @@ class VenuesAndLocations extends Component {
     'tsakhkadzor-complex',
     'philarmonic-orchestra',
     'ararat-hotel',
+    'jockey',
+    'horse-riding',
+    'parz-lake',
+    'enokavan',
+    'aires',
+    'kangar',
   ];
 
   data = {
@@ -54,7 +60,6 @@ class VenuesAndLocations extends Component {
       description: `
         The Armenian National Philharmonic Orchestra (ANPO) was founded in 1925 by Arshak Adamyan and Alexander Spendiaryan.
         For many years it has been considered as one of the leading orchestras of the former Soviet Union.
-        Today, it is a national center of the professional orchestral music in Armenia.
       `,
     },
     'ararat-hotel': {
@@ -62,6 +67,45 @@ class VenuesAndLocations extends Component {
       graphAlias: 'araratHotel',
       description: `
         Ararat Hotel is not just a hotel, it’s a complex providing a wide range of hotel services as well as other attractive ways of rest and relaxation.
+      `,
+    },
+    'jockey': {
+      title: 'Jockey',
+      graphAlias: 'jockey',
+      description: `
+        It is an excellent selection for foreigners to visit and admire its magnificent scenery.
+      `,
+    },
+    'horse-riding': {
+      title: 'Horse Riding',
+      graphAlias: 'horseRiding',
+      description: `
+        It’s a beautiful place, a world away from the bustle of urban life, a place, where you can admire the horses and ride if you wish.
+      `,
+    },
+    'parz-lake': {
+      title: 'Parz Lake',
+      graphAlias: 'parzLake',
+      description: `
+        Lake Parz (Armenian: Պարզ Լիճ) is a small lake located in the Dilijan National Park east of Dilijan in Armenia.
+        The lake was formed by natural climatic changes. "Parz" in Armenian means clear.
+      `,
+    },
+    'enokavan': {
+      title: 'Enokavan',
+      graphAlias: 'enokavan',
+      description: ``,
+    },
+    'aires': {
+      title: 'Aires',
+      graphAlias: 'aires',
+      description: ``,
+    },
+    'kangar': {
+      title: 'Kangar',
+      graphAlias: 'kangar',
+      description: `
+        Ever wished for an exceptional party but want to avoid the hassle of preparing one? We take delight in listening to our clients' needs and visualizations for their dream celebration.
       `,
     },
   };
@@ -251,6 +295,78 @@ export const query = graphql`
       filter: {
         sourceInstanceName: { eq: "images" }
         relativeDirectory: { eq: "slides/ararat-hotel" }
+      }
+    ) {
+      edges {
+        node {
+          ...galleryImage
+        }
+      }
+    }
+    jockeySlides: allFile(
+      filter: {
+        sourceInstanceName: { eq: "images" }
+        relativeDirectory: { eq: "slides/jockey" }
+      }
+    ) {
+      edges {
+        node {
+          ...galleryImage
+        }
+      }
+    }
+    horseRidingSlides: allFile(
+      filter: {
+        sourceInstanceName: { eq: "images" }
+        relativeDirectory: { eq: "slides/horse-riding" }
+      }
+    ) {
+      edges {
+        node {
+          ...galleryImage
+        }
+      }
+    }
+    parzLakeSlides: allFile(
+      filter: {
+        sourceInstanceName: { eq: "images" }
+        relativeDirectory: { eq: "slides/parz-lake" }
+      }
+    ) {
+      edges {
+        node {
+          ...galleryImage
+        }
+      }
+    }
+    enokavanSlides: allFile(
+      filter: {
+        sourceInstanceName: { eq: "images" }
+        relativeDirectory: { eq: "slides/enokavan" }
+      }
+    ) {
+      edges {
+        node {
+          ...galleryImage
+        }
+      }
+    }
+    airesSlides: allFile(
+      filter: {
+        sourceInstanceName: { eq: "images" }
+        relativeDirectory: { eq: "slides/aires" }
+      }
+    ) {
+      edges {
+        node {
+          ...galleryImage
+        }
+      }
+    }
+    kangarSlides: allFile(
+      filter: {
+        sourceInstanceName: { eq: "images" }
+        relativeDirectory: { eq: "slides/kangar" }
       }
     ) {
       edges {

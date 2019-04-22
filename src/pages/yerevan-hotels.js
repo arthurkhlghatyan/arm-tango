@@ -8,6 +8,7 @@ import Jumbotron from '../components/jumbotron';
 import GridLayout from '../components/grid-layout';
 import Modal from 'react-bootstrap/Modal';
 import biographies from '../data/biographies';
+import pageData from '../data/hotels';
 
 class YerevanHotels extends Component {
   state = {
@@ -23,23 +24,6 @@ class YerevanHotels extends Component {
     description: `
       Hurry up to register!!! We have special rates and upgraded rooms for Armenia Tango Festival participants.
     `,
-  };
-
-  data = {
-    'ararat-hotel': {
-      title: 'Ararat Hotel (★ ★ ★ ★ ☆)',
-      graphAlias: 'araratHotel',
-      description: `
-        Ararat Hotel is not just a hotel, it’s a complex providing a wide range of hotel services as well as other attractive ways of rest and relaxation.
-      `,
-    },
-    'armenia-tour': {
-      title: 'Armenia Tour',
-      graphAlias: 'armeniaTour',
-      description: `
-        "Armenia Tour" travel agency was founded in 2015 and spares no effort for developing its business intensively.
-      `,
-    },
   };
 
   openReadMore = (bioItemName) => {
@@ -83,7 +67,7 @@ class YerevanHotels extends Component {
 
   renderGalleryImages() {
     const { galleryItemName } = this.state;
-    const { graphAlias } = this.data[galleryItemName];
+    const { graphAlias } = pageData[galleryItemName];
     const images = this.props.data[`${graphAlias}Slides`].edges;
 
     const map = (item, index) => {
@@ -134,7 +118,7 @@ class YerevanHotels extends Component {
     ];
 
     const map = (slug, index) => {
-      const item = this.data[slug];
+      const item = pageData[slug];
       const {
         title,
         description,

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
+import Jumbotron from '../components/jumbotron';
 import Joi from 'joi-browser';
 import Alert from 'react-bootstrap/Alert';
 import * as emailjs from 'emailjs-com';
@@ -28,7 +29,7 @@ class ContactUs extends Component {
     success: false,
   };
 
-  verifyCallback = (l) => {
+  verifyCallback = () => {
     this.setState({
       captchaVerified: true,
     });
@@ -134,85 +135,79 @@ class ContactUs extends Component {
           title="Contact Us"
           keywords={[`tango`, `#ArmTangoFest2019`, `festival`]}
         />
-        <section className="jumbotron text-center">
-          <div className="container">
-            <Alert
-              show={error || success}
-              dismissible
-              variant={variant}
-              onClose={this.onClose}
-            >
-              <p>
-                {text}
-              </p>
-            </Alert>
-            <h1 className="jumbotron-heading">Contact Us</h1>
-            <p className="lead text-muted">
-              Contact us if you have any questions
+        <Jumbotron title="Contact Us" description="Contact us if you have any questions">
+          <Alert
+            show={error || success}
+            dismissible
+            variant={variant}
+            onClose={this.onClose}
+          >
+            <p>
+              {text}
             </p>
-            <form>
-              <div className="container">
-                <div className="row justify-content-md-center">
-                  <div className="col-lg-6">
-                    <div className="form-group">
-                      <input
-                        type="text"
-                        className="form-control"
-                        placeholder="Full name"
-                        value={this.state.form.fullName}
-                        onChange={this.handleChange('fullName')}
-                      />
-                    </div>
-                    <div className="form-group">
-                      <input
-                        type="text"
-                        className="form-control"
-                        placeholder="Country"
-                        value={this.state.form.country}
-                        onChange={this.handleChange('country')}
-                      />
-                    </div>
-                    <div className="form-group">
-                      <input
-                        type="email"
-                        className="form-control"
-                        placeholder="Email"
-                        value={this.state.form.email}
-                        onChange={this.handleChange('email')}
-                      />
-                    </div>
-                    <div className="form-group">
-                      <input
-                        type="text"
-                        className="form-control"
-                        placeholder="Phone number"
-                        value={this.state.form.phoneNumber}
-                        onChange={this.handleChange('phoneNumber')}
-                      />
-                    </div>
-                    <div>
-                      <textarea
-                        placeholder="Message"
-                        className="form-control mb-3"
-                        rows="4"
-                        value={this.state.form.message}
-                        onChange={this.handleChange('message')}
-                      />
-                    </div>
-                    <div className="g-recaptcha" id="g-recaptcha" />
-                    <button
-                      type="button"
-                      className={`mt-3 btn btn-lg btn-block btn-outline-primary ${this.checkDisabledClass()}`}
-                      onClick={this.handleSubmit}
-                      aria-disabled={this.state.inProgress}>
-                      Submit
-                    </button>
+          </Alert>
+          <form>
+            <div className="container">
+              <div className="row justify-content-md-center">
+                <div className="col-lg-6">
+                  <div className="form-group">
+                    <input
+                      type="text"
+                      className="form-control"
+                      placeholder="Full name"
+                      value={this.state.form.fullName}
+                      onChange={this.handleChange('fullName')}
+                    />
                   </div>
+                  <div className="form-group">
+                    <input
+                      type="text"
+                      className="form-control"
+                      placeholder="Country"
+                      value={this.state.form.country}
+                      onChange={this.handleChange('country')}
+                    />
+                  </div>
+                  <div className="form-group">
+                    <input
+                      type="email"
+                      className="form-control"
+                      placeholder="Email"
+                      value={this.state.form.email}
+                      onChange={this.handleChange('email')}
+                    />
+                  </div>
+                  <div className="form-group">
+                    <input
+                      type="text"
+                      className="form-control"
+                      placeholder="Phone number"
+                      value={this.state.form.phoneNumber}
+                      onChange={this.handleChange('phoneNumber')}
+                    />
+                  </div>
+                  <div>
+                    <textarea
+                      placeholder="Message"
+                      className="form-control mb-3"
+                      rows="4"
+                      value={this.state.form.message}
+                      onChange={this.handleChange('message')}
+                    />
+                  </div>
+                  <div className="g-recaptcha" id="g-recaptcha" />
+                  <button
+                    type="button"
+                    className={`mt-3 btn btn-lg btn-block btn-outline-primary ${this.checkDisabledClass()}`}
+                    onClick={this.handleSubmit}
+                    aria-disabled={this.state.inProgress}>
+                    Submit
+                  </button>
                 </div>
               </div>
+            </div>
           </form>
-          </div>
-        </section>
+        </Jumbotron>
       </Layout>
     );
   }

@@ -22,8 +22,8 @@ module.exports = {
         name: `ArmTangoFest2019`,
         short_name: `ArmTangoFest2019`,
         start_url: `/`,
-        background_color: `rgba(0, 0, 0, 0.7)`,
-        theme_color: `rgba(0, 0, 0, 0.7)`,
+        background_color: `#000000b3`,
+        theme_color: `#000000b3`,
         display: `minimal-ui`,
         icon: `src/images/logo.jpg`, // This path is relative to the root of the site.
       },

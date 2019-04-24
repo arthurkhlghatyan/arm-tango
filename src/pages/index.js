@@ -34,6 +34,7 @@ const IndexPage = ({ data }) => (
       }
     >
       <iframe
+        title="About Armenia"
         width="100%"
         height="300"
         border="0"

@@ -12,6 +12,7 @@ const AboutArmenia = () => (
     />
     <Jumbotron title="About Armenia">
       <iframe
+        title="About Armenia"
         className="mt-3"
         width="100%"
         height="345"

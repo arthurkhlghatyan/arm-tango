@@ -127,7 +127,7 @@ const WorkshopTopics = () => (
             <td>
               <p>Embrace as a basic for tango</p>
               <p>Body language as a key to your best tango</p>
-              <p>Women technique</p> 
+              <p>Women&#39;s technique</p> 
             </td>
           </tr>
         </tbody>

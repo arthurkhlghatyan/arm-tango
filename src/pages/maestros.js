@@ -82,11 +82,12 @@ class Maestros extends Component {
 
   renderVideos() {
     const { videoItemName } = this.state;
-    const { videos } = pageData[videoItemName];
+    const { videos, title } = pageData[videoItemName];
 
     const map = (item, index) => {
       return (
         <iframe
+          title={`Video of ${title}`}
           key={index}
           width="100%"
           height="345"

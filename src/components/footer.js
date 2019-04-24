@@ -56,6 +56,7 @@ const Footer = () => (
             <FaFacebook />
             &nbsp;
             <a
+              rel="noopener"
               target="_blank"
               href="https://www.facebook.com/armtangofest">
               @armtangofest

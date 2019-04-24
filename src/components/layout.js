@@ -24,8 +24,9 @@ const Layout = ({ children }) => (
     render={data => (
       <Fragment>
         <Helmet>
-          <script src="https://www.google.com/recaptcha/api.js?render=explicit"></script>
-          <script async src="https://www.googletagmanager.com/gtag/js?id=UA-138348380-1"></script>
+          <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=UA-138348380-1" />
           <script>
             {`
               window.dataLayer = window.dataLayer || [];

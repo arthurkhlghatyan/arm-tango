@@ -68,6 +68,7 @@ const Footer = () => (
           </h5>
           <p>
             <a
+              rel="noopener"
               onClick={captureBookNowClick}
               href="https://docs.google.com/forms/d/e/1FAIpQLSe8pL_3YiNJZbFwPC1gtCggzjHjid14rbZnDXJRYbFzYsBi_w/viewform">
               Book now
@@ -75,6 +76,7 @@ const Footer = () => (
           </p>
           <p>
             <a
+              rel="noopener"
               target="_blank"
               href="https://www.facebook.com/events/279299639637976/">
               Join Event on Facebook
@@ -82,6 +84,7 @@ const Footer = () => (
           </p>
           <p>
             <a
+              rel="noopener"
               target="_blank"
               href="https://www.facebook.com/lavida.tango.yerevan">
               Tango School Facebook page
@@ -96,6 +99,7 @@ const Footer = () => (
         Developed by
         &nbsp;
         <a
+          rel="noopener"
           onClick={captureProfileLink}
           href="https://www.facebook.com/arthur.khlghatyan.1">Arthur K.</a>
       </div>

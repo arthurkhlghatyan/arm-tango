@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Helmet from 'react-helmet';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 import Jumbotron from '../components/jumbotron';
@@ -131,6 +132,9 @@ class ContactUs extends Component {
 
     return (
       <Layout>
+        <Helmet>
+          <script src="https://www.google.com/recaptcha/api.js?render=explicit" />
+        </Helmet>
         <SEO
           title="Contact Us"
           keywords={[`tango`, `#ArmTangoFest2019`, `festival`]}

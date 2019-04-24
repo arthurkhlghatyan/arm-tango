@@ -30,19 +30,19 @@ export default [
     ],
   },
   {
-    name: 'Yerevan Milonga name',
+    name: 'Yerevan Milonga package',
     prices: [
       30, 35, 40
     ],
   },
   {
-    name: 'Tsakhkadzor Milonga name',
+    name: 'Tsakhkadzor Milonga package',
     prices: [
       37, 45, 50
     ],
   },
   {
-    name: 'Yerevan + Tsakhkadzor Milonga name',
+    name: 'Yerevan + Tsakhkadzor Milonga package',
     prices: [
       55, 65, 85
     ],
@@ -68,19 +68,19 @@ export default [
     ],
   },
   {
-    name: 'Tsakhkadzor full name',
+    name: 'Tsakhkadzor full package',
     prices: [
       195, 220, 270
     ],
   },
   {
-    name: 'Budget full name',
+    name: 'Budget full package',
     prices: [
       685, 770, 890
     ],
   },
   {
-    name: 'Special full name',
+    name: 'Special full package',
     prices: [
       875, 960, 1080
     ],

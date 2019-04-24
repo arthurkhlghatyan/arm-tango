@@ -7,8 +7,9 @@ export default [
     },
     events: [
       {
-        time: '10:00 AM - 11:15 AM',
+        time: '7:00 PM - 11:45 PM',
         title: 'Opening Milonga',
+        isImportant: true,
       }
     ],
   },

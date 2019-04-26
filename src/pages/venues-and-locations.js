@@ -37,6 +37,8 @@ class VenuesAndLocations extends Component {
     'enokavan',
     'aires',
     'kangar',
+    'dilijan',
+    'sevan',
   ];
 
   openReadMore = (bioItemName) => {
@@ -296,6 +298,30 @@ export const query = graphql`
       filter: {
         sourceInstanceName: { eq: "images" }
         relativeDirectory: { eq: "slides/kangar" }
+      }
+    ) {
+      edges {
+        node {
+          ...galleryImage
+        }
+      }
+    }
+    dilijanSlides: allFile(
+      filter: {
+        sourceInstanceName: { eq: "images" }
+        relativeDirectory: { eq: "slides/dilijan" }
+      }
+    ) {
+      edges {
+        node {
+          ...galleryImage
+        }
+      }
+    }
+    sevanSlides: allFile(
+      filter: {
+        sourceInstanceName: { eq: "images" }
+        relativeDirectory: { eq: "slides/sevan" }
       }
     ) {
       edges {

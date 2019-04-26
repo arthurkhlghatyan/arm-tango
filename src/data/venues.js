@@ -68,4 +68,21 @@ export default {
       Ever wished for an exceptional party but want to avoid the hassle of preparing one? We take delight in listening to our clients' needs and visualizations for their dream celebration.
     `,
   },
+  'dilijan': {
+    title: 'Dilijan Resort Town',
+    graphAlias: 'dilijan',
+    description: `
+      Dilijan is a resort town with mild climate, fresh air in the northeast of Yerevan.
+      It is famous for its amazing surroundings, called the "Armenian Switzerland" by the locals, due to the densely forested valleys and mountains with alpine meadows around.
+      It is an excellent center for walking.
+      It is a delightful small  town surrounded by wild nature.
+    `,
+  },
+  'sevan': {
+    'title': 'Lake Sevan',
+    graphAlias: 'sevan',
+    description: `
+      Ancient relict Sevan Lake – "The Jewel of Armenia" or the "Geghama Sea" is one of the largest high-mountainous fresh water lakes in the world and the main attraction not only Gekarkunik, but whole Armenia.
+    `,
+  },
 };

@@ -39,6 +39,8 @@ class VenuesAndLocations extends Component {
     'kangar',
     'dilijan',
     'sevan',
+    'khor-virap',
+    'garni-geghard',
   ];
 
   openReadMore = (bioItemName) => {
@@ -322,6 +324,30 @@ export const query = graphql`
       filter: {
         sourceInstanceName: { eq: "images" }
         relativeDirectory: { eq: "slides/sevan" }
+      }
+    ) {
+      edges {
+        node {
+          ...galleryImage
+        }
+      }
+    }
+    khorVirapSlides: allFile(
+      filter: {
+        sourceInstanceName: { eq: "images" }
+        relativeDirectory: { eq: "slides/khor-virap" }
+      }
+    ) {
+      edges {
+        node {
+          ...galleryImage
+        }
+      }
+    }
+    garniGeghardSlides: allFile(
+      filter: {
+        sourceInstanceName: { eq: "images" }
+        relativeDirectory: { eq: "slides/garni-geghard" }
       }
     ) {
       edges {

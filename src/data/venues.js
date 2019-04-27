@@ -81,10 +81,27 @@ export default {
     `,
   },
   'sevan': {
-    'title': 'Lake Sevan',
+    title: 'Lake Sevan',
     graphAlias: 'sevan',
     description: `
       Ancient relict Sevan Lake – "The Jewel of Armenia" or the "Geghama Sea" is one of the largest high-mountainous fresh water lakes in the world and the main attraction not only Gekarkunik, but whole Armenia.
     `,
   },
+  'khor-virap': {
+    title: 'Khor Virap/Zvartnots/Ejmiatsin',
+    graphAlias: 'khorVirap',
+    description: `
+      The Khor Virap (meaning «deep dungeon») monastery is one of the most popular tourist destinations in Armenia.
+      The Etchmiadzin Cathedral (also spelled "Echmiatsin," "Echmiadzin," and "Edjmiadsin") is located in the city of Etchmiadzin (also referred to as Vagharshapat), Armavir Province in what is now present-day Armenia.
+      The ruins of Zvartnots Cathedral are located on a flat plain within the Ararat Plateau between the cities of Yerevan and Etchmiadzin in Armenia’s Armavir province near Zvartnots International Airport.
+    `,
+  },
+  'garni-geghard': {
+    title: 'Garni/Geghard',
+    graphAlias: 'garniGeghard',
+    description: `
+      The Temple of Garni (Armenian: “Garnu tacar”) is located in the village of Garni in Kotayk Province, Armenia, and it was once a pagan temple dedicated to the Armenian sun god Mihr.
+      First called Ayrivank, or the Monastery of the Caves, the history of Geghard dates back to pre-Christian times.
+    `,
+  }
 };

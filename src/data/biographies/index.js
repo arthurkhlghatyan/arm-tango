@@ -8,6 +8,8 @@ import ParzLake from './parz-lake';
 import Sevan from './sevan';
 import Jockey from './jockey';
 import HorseRiding from './horse-riding';
+import Dilijan from './dilijan';
+import GarniGeghard from './garni-geghard';
 import Kangar from './kangar';
 import YulianaBasmajyan from './yuliana-basmajyan';
 import DominicBridge from './dominic-bridge';
@@ -31,6 +33,8 @@ export default {
   'sevan': Sevan,
   'jockey': Jockey,
   'horse-riding': HorseRiding,
+  'dilijan': Dilijan,
+  'garni-geghard': GarniGeghard,
   'kangar': Kangar,
   'yuliana-basmajyan': YulianaBasmajyan,
   'dominic-bridge': DominicBridge,

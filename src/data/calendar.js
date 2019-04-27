@@ -8,11 +8,11 @@ export default [
     events: [
       {
         time: '2:00 PM - 3:15 PM',
-        title: 'Giros! Tunning to both directions(Ronen Khayat and Dorit Shalom)',
+        title: 'Workshop: Giros! Tunning to both directions(Ronen Khayat and Dorit Shalom)',
       },
       {
         time: '3:15 PM - 4:30 PM',
-        title: 'Ganchos made out of dynamic places(Ronen Khayat and Dorit Shalom)',
+        title: 'Workshop: Ganchos made out of dynamic places(Ronen Khayat and Dorit Shalom)',
       },
       {
         time: '5:00 PM - 7:00 PM',
@@ -20,7 +20,7 @@ export default [
       },
       {
         time: '7:00 PM - 11:45 PM',
-        title: 'Opening Milonga',
+        title: 'Rooftop Opening Milonga',
         isImportant: true,
       },
       {
@@ -38,19 +38,19 @@ export default [
     events: [
       {
         time: '10:00 AM - 11:15 AM',
-        title: 'Make the walk great again (Yuliana Basmajyan & Dominic Bridge)',
+        title: 'Workshop: Make the walk great again (Yuliana Basmajyan & Dominic Bridge)',
       },
       {
         time: '11:15 AM - 12:30 PM',
-        title: 'Boleos & Friends (Yuliana Basmajyan & Dominic Bridge)',
+        title: 'Workshop: Boleos & Friends (Yuliana Basmajyan & Dominic Bridge)',
       },
       {
         time: '2:30 PM - 3:45 PM',
-        title: 'Embrace as a basic for tango (Tatiana Gordinscaia & Pavel Lozan)',
+        title: 'Workshop: Embrace as a basic for tango (Tatiana Gordinscaia & Pavel Lozan)',
       },
       {
         time: '4:00 PM - 5:15 PM',
-        title: 'Rhythm Sequences (Luca Lamberti)',
+        title: 'Workshop: Rhythm Sequences (Luca Lamberti)',
       },
       {
         time: '7:00 PM - 9:00 PM',
@@ -71,19 +71,19 @@ export default [
     events: [
       {
         time: '10:00 AM - 11:15 AM',
-        title: 'Connection, Embrace walking (Ronen Khayat and Dorit Shalom)',
+        title: 'Workshop: Connection, Embrace walking (Ronen Khayat and Dorit Shalom)',
       },
       {
         time: '11:15 AM - 12:30 PM',
-        title: 'Paradas into a change of direction (Ronen Khayat and Dorit Shalom)',
+        title: 'Workshop: Paradas into a change of direction (Ronen Khayat and Dorit Shalom)',
       },
       {
         time: '2:30 PM - 3:45 PM',
-        title: 'Milonga class (Luca Lamberti)',
+        title: 'Workshop: Milonga class (Luca Lamberti)',
       },
       {
         time: '4:00 PM - 5:15 PM',
-        title: 'Body language as a key to your best tango (Luca Lamberti)',
+        title: 'Workshop: Body language as a key to your best tango (Luca Lamberti)',
       },
       {
         time: '7:00 PM - 3:00 AM',
@@ -130,19 +130,19 @@ export default [
       },
       {
         time: '3:00 PM - 4:15 PM',
-        title: 'Musicality (Luca Lamberti)',
+        title: 'Workshop: Musicality (Luca Lamberti)',
       },
       {
         time: '4:15 PM - 5:30 PM',
-        title: 'Women technique (Tatiana Gordinscaia)',
+        title: 'Workshop: Women technique (Tatiana Gordinscaia)',
       },
       {
         time: '7:30 PM - 8:45 PM',
-        title: 'Out of Axis - Colgadas(Ronen Khayat and Dorit Shalom)',
+        title: 'Workshop: Out of Axis - Colgadas(Ronen Khayat and Dorit Shalom)',
       },
       {
         time: '8:45 PM - 10:00 PM',
-        title: 'Out of Axis - Volcadas(Ronen Khayat and Dorit Shalom)',
+        title: 'Workshop: Out of Axis - Volcadas(Ronen Khayat and Dorit Shalom)',
       },
       {
         time: '10:00 PM - 3:00 AM',
@@ -188,19 +188,19 @@ export default [
       },
       {
         time: '10:00 AM - 11:15 AM',
-        title: 'Flow resistance (Sona Pogossian and Arman Tango)',
+        title: 'Workshop: Flow resistance (Sona Pogossian and Arman Tango)',
       },
       {
         time: '11:15 AM - 12:30 PM',
-        title: 'Spirals (Sona Pogossian and Arman Tango)',
+        title: 'Workshop: Spirals (Sona Pogossian and Arman Tango)',
       },
       {
         time: '3:00 PM - 4:15 PM',
-        title: 'Sacadas Chain(Ronen Khayat and Dorit Shalom)',
+        title: 'Workshop: Sacadas Chain(Ronen Khayat and Dorit Shalom)',
       },
       {
         time: '4:15 PM - 5:30 PM',
-        title: 'Dynamics of Boleo (Ronen Khayat and Dorit Shalom)',
+        title: 'Workshop: Dynamics of Boleo (Ronen Khayat and Dorit Shalom)',
       },
       {
         time: '9:00 PM - 2:00 AM',
@@ -234,19 +234,19 @@ export default [
     events: [
       {
         time: '10:00 AM - 11:15 AM',
-        title: 'La caminada (Yuliana Basmajyan and Dominic Bridge)',
+        title: 'Workshop: La caminada (Yuliana Basmajyan and Dominic Bridge)',
       },
       {
         time: '11:15 AM - 12:30 PM',
-        title: 'La Caderas (Yuliana Basmajyan and Dominic Bridge)',
+        title: 'Workshop: La Caderas (Yuliana Basmajyan and Dominic Bridge)',
       },
       {
         time: '2:30 PM - 3:45 PM',
-        title: '4 dimensions in tango improvisation (Mihran Sigaher)',
+        title: 'Workshop: 4 dimensions in tango improvisation (Mihran Sigaher)',
       },
       {
         time: '4:00 PM - 5:15 PM',
-        title: 'Transfiguration for complex figures (Mihran Sigaher)',
+        title: 'Workshop: Transfiguration for complex figures (Mihran Sigaher)',
       },
       {
         time: '9:00 PM - 2:00 AM',
@@ -263,19 +263,19 @@ export default [
     events: [
       {
         time: '10:00 AM - 11:15 AM',
-        title: 'Milonga con Onda (Yuliana Basmajyan & Dominic Bridge)',
+        title: 'Workshop: Milonga con Onda (Yuliana Basmajyan & Dominic Bridge)',
       },
       {
         time: '11:15 AM - 12:30 PM',
-        title: 'Stylish "Alternative" Sequences (Yuliana Basmajyan & Dominic Bridge)',
+        title: 'Workshop: Stylish "Alternative" Sequences (Yuliana Basmajyan & Dominic Bridge)',
       },
       {
         time: '2:30 PM - 3:45 PM',
-        title: 'Sacadas (Yuliana Basmajyan and Dominic Bridge)',
+        title: 'Workshop: Sacadas (Yuliana Basmajyan and Dominic Bridge)',
       },
       {
         time: '4:00 PM - 5:15 PM',
-        title: 'Colgadas (Yuliana Basmajyan and Dominic Bridge)',
+        title: 'Workshop: Colgadas (Yuliana Basmajyan and Dominic Bridge)',
       },
       {
         time: '6:00 PM - 3:00 AM',

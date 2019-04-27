@@ -54,7 +54,9 @@ export default {
   'enokavan': {
     title: 'Enokavan',
     graphAlias: 'enokavan',
-    description: ``,
+    description: `
+      Enokavan is very popular village among people who want to do extreme sports. Nowadays it is very popular among people from Armenia and different countries.
+    `,
   },
   'aires': {
     title: 'Aires',

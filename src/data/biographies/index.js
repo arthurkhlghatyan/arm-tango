@@ -5,6 +5,7 @@ import TsakhkadzorComplex from './tsakhkadzor-complex';
 import Aires from './aires';
 import Enokavan from './enokavan';
 import ParzLake from './parz-lake';
+import Sevan from './sevan';
 import Jockey from './jockey';
 import HorseRiding from './horse-riding';
 import Kangar from './kangar';
@@ -27,8 +28,9 @@ export default {
   'aires': Aires,
   'enokavan': Enokavan,
   'parz-lake': ParzLake,
-  'horse-riding': HorseRiding,
+  'sevan': Sevan,
   'jockey': Jockey,
+  'horse-riding': HorseRiding,
   'kangar': Kangar,
   'yuliana-basmajyan': YulianaBasmajyan,
   'dominic-bridge': DominicBridge,

@@ -7,9 +7,25 @@ export default [
     },
     events: [
       {
+        time: '2:00 PM - 3:15 PM',
+        title: 'Giros! Tunning to both directions(Ronen Khayat and Dorit Shalom)',
+      },
+      {
+        time: '3:15 PM - 4:30 PM',
+        title: 'Ganchos made out of dynamic places(Ronen Khayat and Dorit Shalom)',
+      },
+      {
+        time: '5:00 PM - 7:00 PM',
+        title: 'Welcome dinner',
+      },
+      {
         time: '7:00 PM - 11:45 PM',
         title: 'Opening Milonga',
         isImportant: true,
+      },
+      {
+        time: '11:45 PM - 3:00 AM',
+        title: 'Afterparty milonga',
       }
     ],
   },
@@ -41,7 +57,7 @@ export default [
         title: 'Concert and tango shows in Philarmonic',
       },
       {
-        time: '9:00 PM - 11:45 PM',
+        time: '9:00 PM - 3:00 AM',
         title: 'Milonga',
       },
     ],
@@ -70,7 +86,7 @@ export default [
         title: 'Body language as a key to your best tango (Luca Lamberti)',
       },
       {
-        time: '7:00 PM - 1:00 AM',
+        time: '7:00 PM - 3:00 AM',
         title: 'Gala dinner and milonga',
         isImportant: true,
       }
@@ -88,20 +104,16 @@ export default [
         title: 'Tour to Khor Virap - Zvartnots - Etchmiadzin',
       },
       {
-        time: '3:00 PM - 4:15 PM',
-        title: 'Milonga con Onda (Yuliana Basmajyan & Dominic Bridge)',
-      },
-      {
-        time: '4:15 PM - 5:30 PM',
-        title: 'Stylish "Alternative" Sequences (Yuliana Basmajyan & Dominic Bridge)',
-      },
-      {
-        time: '6:00 PM - 7:00 PM',
+        time: '4:00 PM - 6:00 PM',
         title: 'Horse riding',
       },
       {
-        time: '7:00 PM - 1:00 AM',
-        title: 'Dinner and Milonga',
+        time: '6:00 PM - 8:00 PM',
+        title: 'Dinner',
+      },
+      {
+        time: '8:00 PM - 2:00 AM',
+        title: 'Milonga',
       },
     ],
   },
@@ -133,7 +145,7 @@ export default [
         title: 'Out of Axis - Volcadas(Ronen Khayat and Dorit Shalom)',
       },
       {
-        time: '10:00 PM - 1:00 AM',
+        time: '10:00 PM - 3:00 AM',
         title: 'Milonga in Kangar',
       },
     ],
@@ -146,9 +158,21 @@ export default [
     },
     events: [
       {
-        time: '9:00 AM - Full Day',
+        time: '8:30 AM - 11:30',
         title: 'Tour to Enokavan/Lastiver',
       },
+      {
+        time: '12:30 PM - 2:00 PM',
+        title: 'Lunch',
+      },
+      {
+        time: '5:00 PM - 9:00 PM',
+        title: 'Open Air Dinner Milonga'
+      },
+      {
+        time: '9:00 PM - 10:30',
+        title: 'Tour to Shorja/Sevan',
+      }
     ],
   },
   {
@@ -179,7 +203,7 @@ export default [
         title: 'Dynamics of Boleo (Ronen Khayat and Dorit Shalom)',
       },
       {
-        time: '9:00 PM - 12:30 AM',
+        time: '9:00 PM - 2:00 AM',
         title: 'Milonga',
       }
     ],
@@ -196,7 +220,7 @@ export default [
         title: 'Dilijan - Parz lake',
       },
       {
-        time: '9:00 PM - 12:00 PM',
+        time: '9:00 PM - 2:00 AM',
         title: 'Milonga in Tsakhkadzor',
       },
     ],
@@ -225,7 +249,7 @@ export default [
         title: 'Transfiguration for complex figures (Mihran Sigaher)',
       },
       {
-        time: '9:00 PM - 12:45 AM',
+        time: '9:00 PM - 2:00 AM',
         title: 'Milonga',
       },
     ],
@@ -239,11 +263,11 @@ export default [
     events: [
       {
         time: '10:00 AM - 11:15 AM',
-        title: 'Giros! Tunning to both directions(Ronen Khayat and Dorit Shalom)',
+        title: 'Milonga con Onda (Yuliana Basmajyan & Dominic Bridge)',
       },
       {
         time: '11:15 AM - 12:30 PM',
-        title: 'Ganchos made out of dynamic places(Ronen Khayat and Dorit Shalom)',
+        title: 'Stylish "Alternative" Sequences (Yuliana Basmajyan & Dominic Bridge)',
       },
       {
         time: '2:30 PM - 3:45 PM',
@@ -254,7 +278,7 @@ export default [
         title: 'Colgadas (Yuliana Basmajyan and Dominic Bridge)',
       },
       {
-        time: '7:00 PM - 2:00 AM',
+        time: '6:00 PM - 3:00 AM',
         title: 'Gala dinner (Asado) and Gala milonga',
         isImportant: true,
       }

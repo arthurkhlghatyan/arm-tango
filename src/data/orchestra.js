@@ -6,6 +6,7 @@ export default {
       The Armenian National Philharmonic Orchestra (ANPO) was founded in 1925 by Arshak Adamyan and Alexander Spendiaryan.
       For many years it has been considered as one of the leading orchestras of the former Soviet Union.
       Today, it is a national center of the professional orchestral music in Armenia.
+    
     `,
   },
   'hugo-satorre': {

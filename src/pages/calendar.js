@@ -5,9 +5,31 @@ import Jumbotron from '../components/jumbotron';
 import calendarData from '../data/calendar';
 
 const renderCalendar = (calendar) => {
+  const renderWorkshop = (workshop) => {
+    const { time, title, maestros } = workshop;
+
+    return (
+      <Fragment>
+        <td className="agenda-time">
+          {time}
+        </td>
+        <td className="agenda-events">
+          <div className="text-left agenda-event">
+            <p>Workshop: {title}</p>
+            <p>Maestro(s): {maestros}</p>
+          </div>
+        </td>
+      </Fragment>
+    );
+  };
+
   const renderEvent = (event) => {
-    const { time, title, isImportant } = event;
+    const { time, title, maestros, isImportant } = event;
     const boldClass = isImportant ? 'font-weight-bold' : '';
+
+    if (typeof maestros !== 'undefined') {
+      return renderWorkshop(event);
+    }
 
     return (
       <Fragment>

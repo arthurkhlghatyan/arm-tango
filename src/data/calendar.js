@@ -19,6 +19,7 @@ export default [
       {
         time: '5:00 PM - 7:00 PM',
         title: 'Welcome dinner',
+        included: 'Live Armenian music, variety of delicious food, alcohol and bevarages',
       },
       {
         time: '7:00 PM - 11:45 PM',
@@ -120,6 +121,7 @@ export default [
       {
         time: '6:00 PM - 8:00 PM',
         title: 'Dinner',
+        included: 'Live Argentine music and Tango DJ, Armenian cuisine food, alcohol and bevarages',
       },
       {
         time: '8:00 PM - 2:00 AM',

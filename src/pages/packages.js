@@ -17,7 +17,90 @@ const Packages = () => (
       title="Packages"
       keywords={[`tango`, `#ArmTangoFest2019`, `armenia`]}
     />
-    <Jumbotron title="Packages" description="Explore packages">
+    <Jumbotron title="Packages" description="Yerevan packages">
+      <div className="container mb-3 text-center">
+        <div className="row">
+          <div className="col-lg-4">
+            <div className="card mb-4 box-shadow">
+              <div className="card-header">
+                <h4 className="my-0 font-weight-normal">
+                  Yerevan milongas
+                </h4>
+              </div>
+              <div className="card-body">
+                <h1 className="card-title pricing-card-title">€65</h1>
+                <ul className="list-unstyled mt-3 mb-4">
+                  <li>Grand Opening milonga</li>
+                  <li>Saturday milonga</li>
+                  <li>Grand Gala milonga</li>
+                  <li>Jockey Restaurant milonga</li>
+                  <li>Kangar milonga</li>
+                </ul>
+                <button
+                  onClick={captureBookNowClick}
+                  type="button"
+                  className="btn btn-lg btn-block btn-outline-primary">
+                  Book now
+                </button>
+              </div>
+            </div>
+          </div>
+          <div className="col-lg-4">
+            <div className="card mb-4 box-shadow">
+              <div className="card-header">
+                <h4 className="my-0 font-weight-normal">
+                  Yerevan Weekend Package
+                </h4>
+              </div>
+              <div className="card-body">
+                <h1 className="card-title pricing-card-title">€125</h1>
+                <ul className="list-unstyled mt-3 mb-4">
+                  <li>Grand Opening milonga</li>
+                  <li>Saturday milonga</li>
+                  <li>Grand Gala milonga</li>
+                  <li>3 workshops</li>
+                </ul>
+                <button
+                  onClick={captureBookNowClick}
+                  type="button"
+                  className="btn btn-lg btn-block btn-outline-primary">
+                  Book now
+                </button>
+              </div>
+            </div>
+          </div>
+          <div className="col-lg-4">
+            <div className="card mb-4 box-shadow">
+              <div className="card-header">
+                <h4 className="my-0 font-weight-normal">
+                  Yerevan Full Package
+                </h4>
+              </div>
+              <div className="card-body">
+                <h1 className="card-title pricing-card-title">€345</h1>
+                <ul className="list-unstyled mt-3 mb-4">
+                  <li>Grand Opening milonga</li>
+                  <li>Saturday milonga</li>
+                  <li>Grand Gala milonga</li>
+                  <li>Jockey Restaurant milonga</li>
+                  <li>Kangar milonga</li>
+                  <li>7 workshops</li>
+                  <li>2 days tour with their lunches</li>
+                </ul>
+                <button
+                  onClick={captureBookNowClick}
+                  type="button"
+                  className="btn btn-lg btn-block btn-outline-primary">
+                  Book now
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p className="lead text-muted">
+        Full Packages
+      </p>
       <div className="container mb-3 text-center">
         <div className="row">
           <div className="col-lg-4">
@@ -47,7 +130,7 @@ const Packages = () => (
           <div className="col-lg-4">
             <div className="card mb-4 box-shadow">
               <div className="card-header">
-                <h4 className="my-0 font-weight-normal">Budget Package</h4>
+                <h4 className="my-0 font-weight-normal">Full Budget</h4>
               </div>
               <div className="card-body">
                 <h1 className="card-title pricing-card-title">€770</h1>
@@ -70,7 +153,7 @@ const Packages = () => (
           <div className="col-lg-4">
             <div className="card mb-4 box-shadow">
               <div className="card-header">
-                <h4 className="my-0 font-weight-normal">Special Package</h4>
+                <h4 className="my-0 font-weight-normal">Full Special</h4>
               </div>
               <div className="card-body">
                 <h1 className="card-title pricing-card-title">€960</h1>

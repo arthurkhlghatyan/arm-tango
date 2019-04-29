@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'gatsby';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -67,6 +68,11 @@ const Footer = () => (
           <h5 className="font-weight-bold text-uppercase mb-4">
             Useful links
           </h5>
+          <p>
+            <Link to="/calendar">
+              Calendar
+            </Link>
+          </p>
           <p>
             <a
               rel="noopener"

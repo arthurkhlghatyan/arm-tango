@@ -32,32 +32,25 @@ export default [
   {
     name: 'Yerevan Milonga package',
     prices: [
-      30, 35, 40
+      60, 65, 75
     ],
   },
   {
     name: 'Tsakhkadzor Milonga package',
     prices: [
-      37, 45, 50
+      35, 45, 50
     ],
   },
   {
     name: 'Yerevan + Tsakhkadzor Milonga package',
     prices: [
-      55, 65, 85
+      90, 110, 125
     ],
-  },
-  {
-    name: 'Yerevan milongas + 3 workshops',
-    prices: [
-      75, 90, 120
-    ],
-    isImportant: true,
   },
   {
     name: 'Yerevan milongas + 5 workshops',
     prices: [
-      105, 130, 165
+      130, 165, 195
     ],
     isImportant: true,
   },

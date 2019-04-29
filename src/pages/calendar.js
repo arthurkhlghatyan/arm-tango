@@ -6,12 +6,19 @@ import calendarData from '../data/calendar';
 
 const renderCalendar = (calendar) => {
   const renderDinner = (dinner) => {
-    const { time, title, included } = dinner;
+    const {
+      starts,
+      ends,
+      title,
+      included
+    } = dinner;
 
     return (
       <Fragment>
         <td className="agenda-time">
-          {time}
+          <div>{starts}</div>
+          <div>-</div>
+          <div>{ends}</div>
         </td>
         <td className="agenda-events">
           <div className="text-left agenda-event">
@@ -24,12 +31,14 @@ const renderCalendar = (calendar) => {
   };
 
   const renderWorkshop = (workshop) => {
-    const { time, title, maestros } = workshop;
+    const { starts, ends, title, maestros } = workshop;
 
     return (
       <Fragment>
         <td className="agenda-time">
-          {time}
+          <div>{starts}</div>
+          <div>-</div>
+          <div>{ends}</div>
         </td>
         <td className="agenda-events">
           <div className="text-left agenda-event">
@@ -43,7 +52,8 @@ const renderCalendar = (calendar) => {
 
   const renderEvent = (event) => {
     const {
-      time,
+      starts,
+      ends,
       title,
       maestros,
       included,
@@ -62,7 +72,9 @@ const renderCalendar = (calendar) => {
     return (
       <Fragment>
         <td className={`agenda-time ${boldClass}`}>
-          {time}
+          <div>{starts}</div>
+          <div>-</div>
+          <div>{ends}</div>
         </td>
         <td className="agenda-events">
           <div className={`text-left agenda-event ${boldClass}`}>
@@ -88,7 +100,7 @@ const renderCalendar = (calendar) => {
 
     return (
       <Fragment key={index}>
-        <tr>
+        <tr className="agenda-date-start">
           <td className="agenda-date active" rowSpan={length}>
             <div className="dayofmonth">{date.day}</div>
             <div className="dayofweek">{date.dayofweek}</div>
@@ -115,7 +127,7 @@ const Schedule = () => (
         <table className="table">
           <tbody>
             <tr>
-              <th className="date-header">Date</th>
+              <th className="agenda-date-header">Date</th>
               <th className="text-left">Time</th>
               <th className="text-left">Event</th>
             </tr>

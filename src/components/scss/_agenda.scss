@@ -1,10 +1,23 @@
 .agenda {
-  .date-start {
+  .agenda-date-start {
     border-top: 3px solid #dee2e6; 
+  }
+
+  .agenda-date-header {
+    background-color: #e9ecef !important;
+  }
+
+  .agenda-time {
+    div {
+      display: inline;
+      margin-left: 3px;
+      margin-right: 3px;
+    }
   }
 
   tr {
     background-color: #b8d1f3;
+    font-size: 14px;
 
     td, th {
       border: 0 !important;
@@ -13,10 +26,6 @@
 
   tr:nth-of-type(odd) {
     background-color: #dae5f4;
-  }
-
-  .date-header {
-    background-color: #e9ecef !important;
   }
 
   .agenda-date {
@@ -38,7 +47,31 @@
   }
 }
 
+@media (max-width: 992px) {
+  .agenda {
+    .agenda-time {
+      div {
+        display: block;
+        margin-left: 0px;
+        margin-right: 0px;
+      }
+    }
 
-@media (max-width: 768px) {
-  
+    .agenda-date {
+      width: auto;
+      background-color: #e9ecef;
+
+      .dayofmonth {
+        font-size: 28px;
+        width: auto;
+        float: none;
+        text-align: center;
+        margin-right: 0px;
+      }
+
+      .dayofweek {
+        font-size: 14px;
+      }
+    }
+  }
 }

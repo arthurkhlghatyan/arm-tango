@@ -31,7 +31,7 @@ const WorkshopsAndMilongas = () => (
     <Jumbotron
       title="Workshops and milongas"
       description="Choose whatever works for you">
-      <table className="table">
+      <table className="table table-responsive">
         <thead>
           <tr>
             <th scope="col">Workshops and Milongas</th>

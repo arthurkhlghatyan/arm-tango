@@ -17,7 +17,6 @@
 
   tr {
     background-color: #b8d1f3;
-    font-size: 14px;
 
     td, th {
       border: 0 !important;
@@ -49,6 +48,10 @@
 
 @media (max-width: 992px) {
   .agenda {
+    tr {
+      font-size: 14px;
+    }
+
     .agenda-time {
       div {
         display: block;

@@ -53,12 +53,12 @@ const Packages = () => (
                 </h4>
               </div>
               <div className="card-body">
-                <h1 className="card-title pricing-card-title">€125</h1>
+                <h1 className="card-title pricing-card-title">€165</h1>
                 <ul className="list-unstyled mt-3 mb-4">
                   <li>Grand Opening milonga</li>
                   <li>Saturday milonga</li>
                   <li>Grand Gala milonga</li>
-                  <li>3 workshops</li>
+                  <li>5 workshops</li>
                 </ul>
                 <button
                   onClick={captureBookNowClick}

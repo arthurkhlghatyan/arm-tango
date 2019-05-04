@@ -71,7 +71,7 @@ export default [
       {
         starts: '7:00 PM',
         ends: '9:00 PM',
-        title: 'Concert and tango shows in Philarmonic',
+        title: 'Concert and tango shows in Aram Khachatrian hall(Opera)',
       },
       {
         starts: '9:00 PM',
@@ -161,29 +161,34 @@ export default [
         ends: '2:00 PM',
         title: 'Tour to Garni/Geghard',
       },
+      // {
+      //   starts: '3:00 PM',
+      //   ends: '4:15 PM',
+      //   title: 'Musicality',
+      //   maestros: 'Luca Lamberti',
+      // },
+      // {
+      //   starts: '4:15 PM',
+      //   ends: '5:30 PM',
+      //   title: 'Women technique',
+      //   maestros: 'Tatiana Gordinscaia',
+      // },
       {
         starts: '3:00 PM',
         ends: '4:15 PM',
-        title: 'Musicality',
-        maestros: 'Luca Lamberti',
-      },
-      {
-        starts: '4:15 PM',
-        ends: '5:30 PM',
-        title: 'Women technique',
-        maestros: 'Tatiana Gordinscaia',
-      },
-      {
-        starts: '7:30 PM',
-        ends: '8:45 PM',
         title: 'Out of Axis - Colgadas',
         maestros: 'Ronen Khayat and Dorit Shalom',
       },
       {
-        starts: '8:45 PM',
-        ends: '10:00 PM',
+        starts: '4:15 PM',
+        ends: '5:30 PM',
         title: 'Out of Axis - Volcadas',
         maestros: 'Ronen Khayat and Dorit Shalom',
+      },
+      {
+        starts: '7:00 PM',
+        ends: '9:00 PM',
+        title: 'Concert and Tango shows in Aram Khachatrian hall(Opera)',
       },
       {
         starts: '10:00 PM',

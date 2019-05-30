@@ -165,7 +165,6 @@ class Maestros extends Component {
       'yuliana-basmajyan',
       'dominic-bridge',
       'ronen-dorit',
-      'tatiana-pavel',
     ];
 
     const map = (slug, index) => {
@@ -258,18 +257,6 @@ export const query = graphql`
       filter: {
         sourceInstanceName: { eq: "images" }
         relativeDirectory: { eq: "slides/ronen-dorit" }
-      }
-    ) {
-      edges {
-        node {
-          ...galleryImage
-        }
-      }
-    }
-    tatianaPavelSlides: allFile(
-      filter: {
-        sourceInstanceName: { eq: "images" }
-        relativeDirectory: { eq: "slides/tatiana-pavel" }
       }
     ) {
       edges {

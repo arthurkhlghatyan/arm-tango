@@ -20,14 +20,4 @@ export default {
       Mihran brings tango dancers and audiences together with various orchestras by blending rhythm and melody in appropriate proportions.
     `,
   },
-  'tatiana-gordinscaia': {
-    title: 'Tatiana Gordinscaya',
-    graphAlias: 'tatianaGordinscaia',
-    description: `
-      Tatiana was started to dance argentinian tango 8 years ago and at the moment she has felt that tango is a dance of her soul
-      she decided to found first argentinian tango school in Moldova.
-      After she visited Buenos Aires, she decided that to put music on milongas is an art,
-      and one part of this art is to create atmosphere of small Buenos Aires at the milonga.
-    `,
-  },
 };

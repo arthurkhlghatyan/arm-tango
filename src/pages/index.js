@@ -46,7 +46,7 @@ const IndexPage = ({ data }) => (
 
 export const query = graphql`
   query IndexPageQuery {
-    posterImage: file(relativePath: { eq: "poster.jpg" }) {
+    posterImage: file(relativePath: { eq: "poster.png" }) {
       childImageSharp {
         fluid(maxWidth: 1920, quality: 100) {
           ...GatsbyImageSharpFluid_withWebp

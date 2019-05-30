@@ -115,7 +115,6 @@ class DJs extends Component {
     const items = [
       'luca-lamberti',
       'mihran-sigaher',
-      'tatiana-gordinscaia',
     ];
 
     const map = (slug, index) => {
@@ -193,18 +192,6 @@ export const query = graphql`
       filter: {
         sourceInstanceName: { eq: "images" }
         relativeDirectory: { eq: "slides/mihran-sigaher" }
-      }
-    ) {
-      edges {
-        node {
-          ...galleryImage
-        }
-      }
-    }
-    tatianaGordinscaiaSlides: allFile(
-      filter: {
-        sourceInstanceName: { eq: "images" }
-        relativeDirectory: { eq: "slides/tatiana-gordinscaia" }
       }
     ) {
       edges {

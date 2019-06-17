@@ -44,6 +44,7 @@ const renderCalendar = (calendar) => {
 
   const renderWorkshop = (workshop) => {
     const { starts, ends, title, maestros, gMapUrl } = workshop;
+    const maestrosText = maestros.match('and') !== null ? 'Maestros' : 'Maestro';
 
     return (
       <Fragment>
@@ -55,7 +56,7 @@ const renderCalendar = (calendar) => {
         <td className="agenda-events">
           <div className="text-left agenda-event">
             <p>Workshop: {title}</p>
-            <p>Maestros: {maestros}</p>
+            <p>{maestrosText}: {maestros}</p>
             <p>{renderLocation(gMapUrl)}</p>
           </div>
         </td>

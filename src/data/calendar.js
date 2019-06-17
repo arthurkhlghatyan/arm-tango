@@ -41,7 +41,7 @@ export default [
         starts: '12:15 PM', 
         ends: '1:30 PM',
         title: 'Las Caderas',
-        maestros: 'Yuliana Basmajyan & Dominic Bridge',
+        maestros: 'Yuliana Basmajyan and Dominic Bridge',
         gMapUrl: 'https://goo.gl/maps/sAJJHpkp5xxkEjj4A',
       },
       {

@@ -93,6 +93,14 @@ const Footer = () => (
             <a
               rel="noopener"
               target="_blank"
+              href="https://www.facebook.com/profilepicframes/?selected_overlay_id=2342257539386495">
+              Use Facebook frame
+            </a>
+          </p>
+          <p>
+            <a
+              rel="noopener"
+              target="_blank"
               href="https://www.facebook.com/lavida.tango.yerevan">
               Tango School Facebook page
             </a>

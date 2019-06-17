@@ -106,7 +106,6 @@ const WorkshopTopics = () => (
           <tr>
             <th scope="col">Mihran Sigaher</th>
             <th scope="col">Luca Lamberti</th>
-            <th scope="col">Tatiana Gordinscaya and Pavel Lozan</th>
           </tr>
         </thead>
         <tbody>
@@ -123,11 +122,6 @@ const WorkshopTopics = () => (
               <p>Musicality</p>
               <p>Rhythm sequences</p>
               <p>Milonga</p>
-            </td>
-            <td>
-              <p>Embrace as a basic for tango</p>
-              <p>Body language as a key to your best tango</p>
-              <p>Women&#39;s technique</p> 
             </td>
           </tr>
         </tbody>

@@ -44,6 +44,13 @@ const Navigation = ({ siteTitle }) => (
           </NavDropdown>
           <Nav.Link as={Link} to="/contact-us">Contact Us</Nav.Link>
         </Nav>
+        <Nav className="navbar-right">
+          <NavDropdown title="EN">
+            <NavDropdown.Item as={Link} to="/calendar">EN</NavDropdown.Item>
+            <NavDropdown.Item as={Link} to="/workshop-topics">RU</NavDropdown.Item>
+            <NavDropdown.Item as={Link} to="/workshop-topics">AM</NavDropdown.Item>
+          </NavDropdown>
+        </Nav>
       </Navbar.Collapse>
     </Container>
   </Navbar>

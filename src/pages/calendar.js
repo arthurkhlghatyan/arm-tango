@@ -4,13 +4,24 @@ import SEO from '../components/seo';
 import Jumbotron from '../components/jumbotron';
 import calendarData from '../data/calendar';
 
+const renderLocation = (gMapUrl) => {
+  return typeof gMapUrl === 'undefined' ?
+    null :
+    (
+      <a style={{ display: 'block' }} target="_blank" href={gMapUrl}>
+        Open place on Google Map
+      </a>
+    );
+};
+
 const renderCalendar = (calendar) => {
   const renderDinner = (dinner) => {
     const {
       starts,
       ends,
       title,
-      included
+      included,
+      gMapUrl,
     } = dinner;
 
     return (
@@ -24,6 +35,7 @@ const renderCalendar = (calendar) => {
           <div className="text-left agenda-event">
             <p>{title}</p>
             <p>Included: {included}</p>
+            <p>{renderLocation(gMapUrl)}</p>
           </div>
         </td>
       </Fragment>
@@ -31,7 +43,7 @@ const renderCalendar = (calendar) => {
   };
 
   const renderWorkshop = (workshop) => {
-    const { starts, ends, title, maestros } = workshop;
+    const { starts, ends, title, maestros, gMapUrl } = workshop;
 
     return (
       <Fragment>
@@ -44,6 +56,7 @@ const renderCalendar = (calendar) => {
           <div className="text-left agenda-event">
             <p>Workshop: {title}</p>
             <p>Maestro(s): {maestros}</p>
+            <p>{renderLocation(gMapUrl)}</p>
           </div>
         </td>
       </Fragment>
@@ -58,8 +71,19 @@ const renderCalendar = (calendar) => {
       maestros,
       included,
       isImportant,
+      eventLink,
+      gMapUrl,
     } = event;
     const boldClass = isImportant ? 'font-weight-bold' : '';
+
+    const eventRow = 
+      typeof eventLink === 'undefined' ?
+      null :
+      (
+        <a style={{ display: 'block' }} target="_blank" href={eventLink}>
+          See Facebook Event
+        </a>
+      );
 
     if (typeof maestros !== 'undefined') {
       return renderWorkshop(event);
@@ -78,7 +102,11 @@ const renderCalendar = (calendar) => {
         </td>
         <td className="agenda-events">
           <div className={`text-left agenda-event ${boldClass}`}>
-            {title}
+            <p>{title}</p>
+            <p>
+              {eventRow}
+              {renderLocation(gMapUrl)}
+            </p>
           </div>
         </td>
       </Fragment>

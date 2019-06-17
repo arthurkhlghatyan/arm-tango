@@ -106,22 +106,23 @@ const WorkshopTopics = () => (
           <tr>
             <th scope="col">Mihran Sigaher</th>
             <th scope="col">Luca Lamberti</th>
+            <th scope="col">Arman Tango and Sona Pogossian</th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <td>
-              <p>
-                4 dimensions in tango improvisation
-              </p>
-              <p>
-                Transfiguration for complex figures
-              </p>
+              <p>4 dimensions in tango improvisation</p>
+              <p>Transfiguration for complex figures</p>
             </td>
             <td>
               <p>Musicality</p>
               <p>Rhythm sequences</p>
               <p>Milonga</p>
+            </td>
+            <td>
+              <p>Spirals</p>
+              <p>Flow resistance</p>
             </td>
           </tr>
         </tbody>

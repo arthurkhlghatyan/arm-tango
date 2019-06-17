@@ -55,7 +55,7 @@ const renderCalendar = (calendar) => {
         <td className="agenda-events">
           <div className="text-left agenda-event">
             <p>Workshop: {title}</p>
-            <p>Maestro(s): {maestros}</p>
+            <p>Maestros: {maestros}</p>
             <p>{renderLocation(gMapUrl)}</p>
           </div>
         </td>

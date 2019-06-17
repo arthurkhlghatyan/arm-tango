@@ -23,9 +23,7 @@ class Maestros extends Component {
   page = {
     title: 'Maestros',
     keywords: [`tango`, `#ArmTangoFest2019`, `maestros`],
-    description: `
-      Famous tango maestros are going to share, teach and dance during Festival.
-    `,
+    description: ``,
   };
 
   openReadMore = (bioItemName) => {
